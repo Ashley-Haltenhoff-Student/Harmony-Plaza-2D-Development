@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GrayTiles_2_0: 4824120791552589593
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

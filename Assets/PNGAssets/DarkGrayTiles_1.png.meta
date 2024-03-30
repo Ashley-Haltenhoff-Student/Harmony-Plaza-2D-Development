@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DarkGrayTiles_1_0: -4908372409284142358
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

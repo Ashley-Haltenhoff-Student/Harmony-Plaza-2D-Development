@@ -1,0 +1,520 @@
+fileFormatVersion: 2
+guid: c6384951c1276764bbc90703321ea2b9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2297035573553223834
+    second: PlayerAnimationsOne 1_0
+  - first:
+      213: 2201045917353466895
+    second: PlayerAnimationsOne 1_1
+  - first:
+      213: -2397053098860668626
+    second: PlayerAnimationsOne 1_2
+  - first:
+      213: 3370131326048260576
+    second: PlayerAnimationsOne 1_3
+  - first:
+      213: -5559627041620167210
+    second: PlayerAnimationsOne 1_4
+  - first:
+      213: -7519831330740398645
+    second: PlayerAnimationsOne 1_5
+  - first:
+      213: 2900598873513256823
+    second: PlayerAnimationsOne 1_6
+  - first:
+      213: -7990745720034171523
+    second: PlayerAnimationsOne 1_7
+  - first:
+      213: -2813351884938982391
+    second: PlayerAnimationsOne 1_8
+  - first:
+      213: -6401009337708011122
+    second: PlayerAnimationsOne 1_9
+  - first:
+      213: 1046285522833797206
+    second: PlayerAnimationsOne 1_10
+  - first:
+      213: 7921085355056983559
+    second: PlayerAnimationsOne 1_11
+  - first:
+      213: -5916804654505161564
+    second: PlayerAnimationsOne 1_12
+  - first:
+      213: -5717179570956325983
+    second: PlayerAnimationsOne 1_13
+  - first:
+      213: -1254918215837768434
+    second: PlayerAnimationsOne 1_14
+  - first:
+      213: -7256858556500777013
+    second: PlayerAnimationsOne 1_15
+  - first:
+      213: 8958132402962614702
+    second: PlayerAnimationsOne 1_16
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlayerAnimationsOne 1_0
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 641
+        width: 92
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 667ace9e05a4f10e0800000000000000
+      internalID: -2297035573553223834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimationsOne 1_1
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 641
+        width: 92
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0c5d26a99fab8e10800000000000000
+      internalID: 2201045917353466895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimationsOne 1_2
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 641
+        width: 92
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2919ae18e4fbbed0800000000000000
+      internalID: -2397053098860668626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimationsOne 1_3
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 641
+        width: 86
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e1d587d59c15ce20800000000000000
+      internalID: 3370131326048260576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimationsOne 1_4
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 641
+        width: 92
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d5f29c69ac38d2b0800000000000000
+      internalID: -5559627041620167210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimationsOne 1_5
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 641
+        width: 86
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc59d581f3134a790800000000000000
+      internalID: -7519831330740398645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimationsOne 1_6
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 365
+        width: 98
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 777e7a3be4ff04820800000000000000
+      internalID: 2900598873513256823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimationsOne 1_7
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 365
+        width: 86
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d75e3eaba1b2b1190800000000000000
+      internalID: -7990745720034171523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimationsOne 1_8
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 365
+        width: 110
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90c490ecd57f4f8d0800000000000000
+      internalID: -2813351884938982391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimationsOne 1_9
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 365
+        width: 86
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e81a4fddbeb0b27a0800000000000000
+      internalID: -6401009337708011122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimationsOne 1_10
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 365
+        width: 92
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 650742ab327258e00800000000000000
+      internalID: 1046285522833797206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimationsOne 1_11
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 359
+        width: 92
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70e68b7a9295ded60800000000000000
+      internalID: 7921085355056983559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimationsOne 1_12
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 359
+        width: 92
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ac87dae38943eda0800000000000000
+      internalID: -5916804654505161564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimationsOne 1_13
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 83
+        width: 98
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ab270c987f78a0b0800000000000000
+      internalID: -5717179570956325983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimationsOne 1_14
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 83
+        width: 86
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e05a2d21882a59ee0800000000000000
+      internalID: -1254918215837768434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimationsOne 1_15
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 83
+        width: 110
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc7648267957a4b90800000000000000
+      internalID: -7256858556500777013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimationsOne 1_16
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 83
+        width: 86
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea9c08155fda15c70800000000000000
+      internalID: 8958132402962614702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,17 +1,17 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
+
 public class PlayerMovement : MonoBehaviour
 {
-    Rigidbody2D rigidbody;
+    public float speed = 1f;
 
-    void Start()
+    private void Update()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
+        Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, -12);
     }
 
-    public void PlayerWalk()
+    public void Walk(Vector3 currentPosition, Vector3 direction)
     {
-        
+        transform.position += speed * Time.deltaTime * direction;
     }
 }

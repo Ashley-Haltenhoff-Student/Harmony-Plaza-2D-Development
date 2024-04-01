@@ -15,50 +15,47 @@ public class PlayerAnimation : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
             animator.SetBool("Right", true);
-            playerMovement.PlayerWalk();
+            playerMovement.Walk(transform.position, Vector3.right);
         }
-
-        if (Input.GetKeyUp(KeyCode.D))
+        else
         {
             animator.SetBool("Right", false);
         }
 
-        if (Input.GetKeyDown(KeyCode.W))
+
+        if (Input.GetKey(KeyCode.W))
         {
             animator.SetBool("Up", true);
-            playerMovement.PlayerWalk();
+            playerMovement.Walk(transform.position, Vector3.up);
         }
-
-        if (Input.GetKeyUp(KeyCode.W))
+        else
         {
             animator.SetBool("Up", false);
         }
 
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
             animator.SetBool("Left", true);
-            playerMovement.PlayerWalk();
+            playerMovement.Walk(transform.position, Vector3.left);
         }
-
-        if (Input.GetKeyUp(KeyCode.A))
+        else
         {
             animator.SetBool("Left", false);
         }
 
-        if (Input.GetKeyDown(KeyCode.S))
+
+        if (Input.GetKey(KeyCode.S))
         {
             animator.SetBool("Down", true);
-            playerMovement.PlayerWalk();
+            playerMovement.Walk(transform.position, Vector3.down);
         }
-
-        if (Input.GetKeyUp(KeyCode.S))
+        else
         {
             animator.SetBool("Down", false);
         }
-
 
     }
 

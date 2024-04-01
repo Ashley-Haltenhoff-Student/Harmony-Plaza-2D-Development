@@ -5546,16 +5546,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -15, y: 32, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -29, y: 33, z: 0}
     second:
       serializedVersion: 2
@@ -13680,7 +13670,7 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 185
     m_Data: {fileID: 11400000, guid: 0e2e12de2fdcd7f429c7ecf14b08b96d, type: 2}
-  - m_RefCount: 78
+  - m_RefCount: 77
     m_Data: {fileID: 11400000, guid: ce42d33f24562834ea9181884cd18b50, type: 2}
   - m_RefCount: 488
     m_Data: {fileID: 11400000, guid: cde660876bc2b4f4d94433473fe65a98, type: 2}
@@ -13695,7 +13685,7 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 185
     m_Data: {fileID: -4908372409284142358, guid: dfa9e1c550f1c58489cee3d79cd2a278, type: 3}
-  - m_RefCount: 78
+  - m_RefCount: 77
     m_Data: {fileID: -3540433322725218077, guid: 5683ab41412ff6e45be919b83a34e0b7, type: 3}
   - m_RefCount: 488
     m_Data: {fileID: -9087799795531915957, guid: e010da23e0b8ec64da0e000c39f68c89, type: 3}
@@ -13708,7 +13698,7 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileMatrixArray:
-  - m_RefCount: 1337
+  - m_RefCount: 1336
     m_Data:
       e00: 1
       e01: 0
@@ -13763,7 +13753,7 @@ Tilemap:
       e32: 7.13e-43
       e33: 7.16e-43
   m_TileColorArray:
-  - m_RefCount: 1337
+  - m_RefCount: 1336
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 0
     m_Data: {r: 3.5719e-41, g: 3.5719e-41, b: 3.5719e-41, a: 3.5719e-41}
@@ -14238,6 +14228,7 @@ GameObject:
   - component: {fileID: 1273871662}
   - component: {fileID: 1273871664}
   - component: {fileID: 1273871663}
+  - component: {fileID: 1273871665}
   m_Layer: 0
   m_Name: Tilemap_Walls
   m_TagString: Untagged
@@ -14298,8 +14289,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -909535343
-  m_SortingLayer: 1
+  m_SortingLayerID: 1022299287
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.5, y: 1.95, z: 0}
@@ -16005,6 +15996,44 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1273871665
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273871661}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 2
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &1437760598
 GameObject:
   m_ObjectHideFlags: 0
@@ -16094,6 +16123,7 @@ GameObject:
   - component: {fileID: 1781346908}
   - component: {fileID: 1781346911}
   - component: {fileID: 1781346912}
+  - component: {fileID: 1781346913}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -16262,6 +16292,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+--- !u!50 &1781346913
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781346905}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1813693443
 GameObject:
   m_ObjectHideFlags: 0

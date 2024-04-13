@@ -11,5 +11,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMallArea.unity
     guid: deafb409cc44ad74bb56dff28743f2db
+  - enabled: 1
+    path: Assets/Scenes/WomensBathroom.unity
+    guid: 060c6a4943c554949ad3d02f81056616
+  - enabled: 1
+    path: Assets/Scenes/Bookstore.unity
+    guid: 67014d5007b67a34cbf31f3a3ed2ab26
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

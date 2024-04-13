@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2a1d5019dd56b90408f8514d96b46021
+guid: 4fbd728e7dce1a04b8f20ada4ddb47d9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2583362178385188051
-    second: BlueMallWallCorner 1_0
+      213: 8989744126251653902
+    second: Grainy_Tile_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BlueMallWallCorner 1_0
+      name: Grainy_Tile_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 200
-        height: 490
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3d414d8c632f9d320800000000000000
-      internalID: 2583362178385188051
+      spriteID: e0b52e237acf1cc70800000000000000
+      internalID: 8989744126251653902
       vertices: []
       indices: 
       edges: []

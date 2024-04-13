@@ -18,7 +18,7 @@ public class PlayerAnimation : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             animator.SetBool("Right", true);
-            playerMovement.Walk(transform.position, Vector3.right);
+            playerMovement.Walk(Vector3.right);
         }
         else
         {
@@ -29,7 +29,7 @@ public class PlayerAnimation : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             animator.SetBool("Up", true);
-            playerMovement.Walk(transform.position, Vector3.up);
+            playerMovement.Walk(Vector3.up);
         }
         else
         {
@@ -39,7 +39,7 @@ public class PlayerAnimation : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             animator.SetBool("Left", true);
-            playerMovement.Walk(transform.position, Vector3.left);
+            playerMovement.Walk(Vector3.left);
         }
         else
         {
@@ -50,7 +50,7 @@ public class PlayerAnimation : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             animator.SetBool("Down", true);
-            playerMovement.Walk(transform.position, Vector3.down);
+            playerMovement.Walk( Vector3.down);
         }
         else
         {

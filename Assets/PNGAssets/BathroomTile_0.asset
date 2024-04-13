@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: BlueMallWall_0
+  m_Name: BathroomTile_0
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -8653410545996702928, guid: 9a7e5544ff542e548a47abbe84c9bda9, type: 3}
+  m_Sprite: {fileID: -2268256440562240097, guid: da3073faa61bdd6498d68539c483467e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

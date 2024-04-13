@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9a7e5544ff542e548a47abbe84c9bda9
+guid: c6d3b02b6ed7a28459308ebc4efa28ad
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8653410545996702928
-    second: BlueMallWall_0
+      213: 7801218485004713759
+    second: Escalator_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BlueMallWall_0
+      name: Escalator_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 200
-        height: 490
+        x: 131
+        y: 95
+        width: 578
+        height: 2282
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 03b5f36c4f8e8e780800000000000000
-      internalID: -8653410545996702928
+      spriteID: f1fbae521ee734c60800000000000000
+      internalID: 7801218485004713759
       vertices: []
       indices: 
       edges: []

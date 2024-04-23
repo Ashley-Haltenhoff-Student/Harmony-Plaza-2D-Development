@@ -138,11 +138,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 200
         width: 600
-        height: 361
+        height: 190
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,10 +154,31 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Bookstore_Cabinet_Empty_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 600
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afccead5242af8e4bba86d1a80e27f35
+      internalID: -97690489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cbe9531b27825264a8d6b772393c497f
     internalID: 0
     vertices: []
     indices: 
@@ -166,6 +187,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Bookstore_Cabinet_Empty_0: -2889420419534170510
+      Bookstore_Cabinet_Empty_1: -97690489
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -138,11 +138,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 4
-        width: 496
-        height: 937
+        y: 315
+        width: 500
+        height: 628
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,10 +154,31 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Potted_Tree_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 500
+        height: 315
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 517994c8a4aec8148b8e2337e4b93349
+      internalID: 991665973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3de2056fb669504488687472103529da
     internalID: 0
     vertices: []
     indices: 
@@ -166,6 +187,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Potted_Tree_0: 6738585280860090103
+      Potted_Tree_1: 991665973
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

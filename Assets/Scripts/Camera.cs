@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Camera : MonoBehaviour
 {
-    [SerializeField] PlayerMovement player;
+    [SerializeField] Player player;
 
     private Vector3 offset = new Vector3(0f, 0f, -8f);
     private float smoothTime = 0.25f;

@@ -1,15 +1,14 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-public class PlayerAnimation : MonoBehaviour
+public class Player : MonoBehaviour
 {
     public Animator animator;
-    PlayerMovement playerMovement;
+    public float speed = 10f;
 
     void Start()
     {
         animator = GetComponent<Animator>();       
-        playerMovement = GetComponent<PlayerMovement>();
     }
 
     void Update()
@@ -18,7 +17,7 @@ public class PlayerAnimation : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             animator.SetBool("Right", true);
-            playerMovement.Walk(Vector3.right);
+            Walk(Vector3.right);
         }
         else
         {
@@ -29,7 +28,7 @@ public class PlayerAnimation : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             animator.SetBool("Up", true);
-            playerMovement.Walk(Vector3.up);
+            Walk(Vector3.up);
         }
         else
         {
@@ -39,7 +38,7 @@ public class PlayerAnimation : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             animator.SetBool("Left", true);
-            playerMovement.Walk(Vector3.left);
+            Walk(Vector3.left);
         }
         else
         {
@@ -50,13 +49,18 @@ public class PlayerAnimation : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             animator.SetBool("Down", true);
-            playerMovement.Walk( Vector3.down);
+            Walk( Vector3.down);
         }
         else
         {
             animator.SetBool("Down", false);
         }
 
+    }
+
+    public void Walk(Vector3 direction)
+    {
+        transform.position += speed * Time.deltaTime * direction;
     }
 
 }

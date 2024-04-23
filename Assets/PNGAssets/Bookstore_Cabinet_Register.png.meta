@@ -134,13 +134,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bookstore_Cabinet_Register_0
+      name: Bookstore_Cabinet_Register_TOP
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 200
         width: 600
-        height: 511
+        height: 315
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,10 +154,31 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Bookstore_Cabinet_Register_BOTTOM
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 600
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30b7ffb0932f70542b3dddb78a26bcc7
+      internalID: 1179920012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0dc68d2ca15ccb1409bcfd9ad8b53579
     internalID: 0
     vertices: []
     indices: 
@@ -165,7 +186,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bookstore_Cabinet_Register_0: 5194378121682418450
+      Bookstore_Cabinet_Register_BOTTOM: 1179920012
+      Bookstore_Cabinet_Register_TOP: 5194378121682418450
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

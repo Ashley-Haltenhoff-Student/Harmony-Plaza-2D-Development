@@ -9,12 +9,22 @@ namespace HarmonyPlaza {
 
         private bool allowInteraction = false;
         public string[] dialogue;
+        [SerializeField] private bool isBookshelf = false;
+
+        private void Start()
+        {
+            if (gameObject.CompareTag("Bookshelf")) isBookshelf = true;
+        }
 
         private void Update()
         {
             if (allowInteraction && Input.GetKeyDown(KeyCode.E))
             {
                 GoThroughDialogue();
+                if (isBookshelf)
+                {
+                    
+                }
             }
 
         }
@@ -40,15 +50,15 @@ namespace HarmonyPlaza {
             }
         }
 
-        private IEnumerator WaitForKeyPress()
-        {
-            while (!Input.GetKeyDown(KeyCode.RightArrow))
-            {   
-                Thread.Sleep(1000);
-                yield return null;
-            }
-            StopCoroutine(WaitForKeyPress());
-        }
+        //private IEnumerator WaitForKeyPress()
+        //{
+        //    while (!Input.GetKeyDown(KeyCode.RightArrow))
+        //    {   
+        //        Thread.Sleep(1000);
+        //        yield return null;
+        //    }
+        //    StopCoroutine(WaitForKeyPress());
+        //}
 
     }
 }

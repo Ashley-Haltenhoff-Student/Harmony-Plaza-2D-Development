@@ -1,19 +1,22 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
-{
-    private static GameManager instance;
+namespace HarmonyPlaza { 
 
-    private void Awake()
+    public class GameManager : MonoBehaviour
     {
-        if (instance)
+        private static GameManager instance;
+
+        private void Awake()
         {
-            Destroy(this);
-        }
-        else
-        {
-            instance = this;
+            if (instance)
+            {
+                Destroy(this);
+            }
+            else
+            {
+                instance = this;
+            }
         }
     }
 }

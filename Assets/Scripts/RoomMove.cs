@@ -1,16 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class RoomMove : MonoBehaviour
-{
-    public int sceneBuildIndex;
+namespace HarmonyPlaza { 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public class RoomMove : MonoBehaviour
     {
-        if(collision.CompareTag("Player"))
+        public int sceneBuildIndex;
+
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            print("Switching Scene to " + sceneBuildIndex);
-            SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
+            if(collision.CompareTag("Player"))
+            {
+                print("Switching Scene to " + sceneBuildIndex);
+                SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
+            }
         }
     }
 }

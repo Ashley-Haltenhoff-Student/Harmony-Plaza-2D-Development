@@ -6,16 +6,16 @@ namespace HarmonyPlaza
     {
         [SerializeField] private string stockName;
         [SerializeField] private string description;
-        [SerializeField] private Bookshelf correctBookshelf;
+        [SerializeField] private string correctBookshelf;
 
         private void Start()
         {
             name = gameObject.name;
         }
 
-        public void DestroyStock()
+        public string GetBookshelf()
         {
-            Destroy(gameObject);
+            return correctBookshelf;
         }
     }
 }

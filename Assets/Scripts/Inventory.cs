@@ -4,23 +4,48 @@ namespace HarmonyPlaza
 { 
     public class Inventory : MonoBehaviour
     {
-        [SerializeField] private GameObject[] items = new GameObject[1];
+        [SerializeField] private GameObject item = null;
+        [SerializeField] private Stock heldStock = null;
 
-        public void AddToInventory(GameObject item)
+        public void AddToInventory(GameObject itemGiven)
         {
-            for (int i = 0; i < items.Length; i++)
+            if (item == null)
             {
-                if (items[i] == null)
-                {
-                    items[i] = item;
-                    print(item.name + "added to inventory at index" + i);
-                    break;
-                }
-                else
-                {
-                    print("there's already an object in " + i);
-                }
+                item = itemGiven;
+                heldStock = item.GetComponent<Stock>();
+                print(item.name + "added to inventory");
             }
+            else
+            {
+                print("there's already an object in your inventory");
+            }
+        }
+
+        public bool HasStock()
+        {
+            if (item != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public void DestroyStock()
+        {
+            if (HasStock())
+            {
+                print(item.name + "is destroyed");
+                item = null;
+                heldStock = null;
+            }
+        }
+
+        public Stock GetStock()
+        {
+            return heldStock;
         }
     }
 }

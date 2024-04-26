@@ -171,7 +171,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - These are bookshelves that hold romance books.
-  isBookshelf: 0
 --- !u!61 &90470028
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -871,7 +870,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - These are bookshelves that hold foreign language books.
-  isBookshelf: 0
 --- !u!61 &492401852
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1034,7 +1032,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - These are bookshelves that hold educational books.
-  isBookshelf: 0
 --- !u!61 &638599321
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3427,7 +3424,7 @@ GameObject:
   - component: {fileID: 813853277}
   - component: {fileID: 813853279}
   - component: {fileID: 813853281}
-  - component: {fileID: 813853280}
+  - component: {fileID: 813853282}
   m_Layer: 0
   m_Name: Boxes
   m_TagString: Untagged
@@ -3548,21 +3545,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 5.1, y: 3.442338}
   m_EdgeRadius: 0
---- !u!114 &813853280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 813853276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eb17b4175be8a544af5541bcb44d17f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-  - These are boxes.
-  isBookshelf: 0
 --- !u!58 &813853281
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3599,6 +3581,29 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.76595163, y: -0.6524782}
   m_Radius: 3.9684305
+--- !u!114 &813853282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813853276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a73e3079badaacf4ba70e42ae8df1f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - These are boxes.
+  stocks:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  stockPrefabs:
+  - {fileID: 3116386105220306924, guid: c8077c402abf26746b92c481f78733a9, type: 3}
+  - {fileID: 3116386105220306924, guid: fbf206f29517ec745b3b3662f679d755, type: 3}
+  inventory: {fileID: 0}
+  player: {fileID: 125478887}
 --- !u!1001 &911702128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4027,6 +4032,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6293190461720925631, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
+      propertyPath: items.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7020457836533421141, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -4172,7 +4181,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - These are bookshelves that hold science fiction books.
-  isBookshelf: 0
 --- !u!61 &1212645647
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4459,7 +4467,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - These are bookshelves that hold non-fiction and history books.
-  isBookshelf: 0
 --- !u!61 &1402160271
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5307,7 +5314,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - These are bookshelves that hold classic books.
-  isBookshelf: 0
 --- !u!61 &1546035205
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5454,7 +5460,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - This is your friend, djungelskog <3
-  isBookshelf: 0
 --- !u!58 &1593626905
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11544,7 +11549,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - These are bookshelves that hold Mystery books.
-  isBookshelf: 0
 --- !u!61 &1910491339
 BoxCollider2D:
   m_ObjectHideFlags: 0

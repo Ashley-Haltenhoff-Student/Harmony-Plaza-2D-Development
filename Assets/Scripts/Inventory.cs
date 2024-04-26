@@ -1,19 +1,25 @@
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
-{
-    [SerializeField] private GameObject[] items;
-
-    public void AddToInventory(GameObject item)
+namespace HarmonyPlaza 
+{ 
+    public class Inventory : MonoBehaviour
     {
-        for (int i = 0; i < items.Length; i++)
+        [SerializeField] private GameObject[] items = new GameObject[1];
+
+        public void AddToInventory(GameObject item)
         {
-            if (items[i] == null) { }
-            else
+            for (int i = 0; i < items.Length; i++)
             {
-                items[i] = item;
-                print(item + "added to inventory at index" + i);
-                break;
+                if (items[i] == null)
+                {
+                    items[i] = item;
+                    print(item.name + "added to inventory at index" + i);
+                    break;
+                }
+                else
+                {
+                    print("there's already an object in " + i);
+                }
             }
         }
     }

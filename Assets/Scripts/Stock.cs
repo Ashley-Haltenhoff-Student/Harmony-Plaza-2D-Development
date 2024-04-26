@@ -1,20 +1,21 @@
 using UnityEngine;
 
-public class Stock : MonoBehaviour
-{
-    [SerializeField] private string name;
-    [SerializeField] private string description;
-    [SerializeField] private Bookshelf correctBookshelf;
-
-    public Stock(string name, string description, Bookshelf correctBookshelf)
+namespace HarmonyPlaza 
+{ 
+    public class Stock : MonoBehaviour
     {
-        this.name = name;
-        this.description = description;
-        this.correctBookshelf = correctBookshelf;
-    }
+        [SerializeField] private string stockName;
+        [SerializeField] private string description;
+        [SerializeField] private Bookshelf correctBookshelf;
 
-    public void DestoryStock()
-    {
-        Destroy(gameObject);
+        private void Start()
+        {
+            name = gameObject.name;
+        }
+
+        public void DestroyStock()
+        {
+            Destroy(gameObject);
+        }
     }
 }

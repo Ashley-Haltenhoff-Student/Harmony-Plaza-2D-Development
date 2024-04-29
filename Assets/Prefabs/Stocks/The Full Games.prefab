@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 421830865051579866}
   - component: {fileID: -3388832902027718429}
   m_Layer: 0
-  m_Name: Pride And Prejudice
+  m_Name: The Full Games
   m_TagString: Stock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 077f7527e1627c448ab5be4fd4004034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stockName: 
-  description: 
-  correctBookshelf: Classics
+  stockName: The Full Games
+  correctBookshelf: Fictions
+  icon: {fileID: 0}

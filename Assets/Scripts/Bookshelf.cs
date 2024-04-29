@@ -9,7 +9,7 @@ namespace HarmonyPlaza
         [SerializeField] private Inventory inventory;
         [SerializeField] private Stock stock = null;
 
-        [SerializeField] private string name;
+        [SerializeField] private string bookshelfName;
 
         private void Update()
         {
@@ -19,12 +19,12 @@ namespace HarmonyPlaza
                 {
                     if (CorrectBookshelf())
                     {
-                        print("Book correctly stocked!");
+                        UI.Notify("Book correctly stocked!");
                         inventory.DestroyStock();
                     }
                     else
                     {
-                        print("Wrong bookshelf :(");
+                        UI.Notify("Wrong bookshelf :(");
                     }
                 }
             }
@@ -33,7 +33,7 @@ namespace HarmonyPlaza
         private bool CorrectBookshelf()
         {
             stock = inventory.GetStock();
-            if (stock.GetBookshelf() == name)
+            if (stock.GetBookshelf() == bookshelfName)
             {
                 return true;
             }

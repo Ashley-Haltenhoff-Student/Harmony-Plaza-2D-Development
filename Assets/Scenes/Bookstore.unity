@@ -120,6 +120,85 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &7931788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7931789}
+  - component: {fileID: 7931791}
+  - component: {fileID: 7931790}
+  m_Layer: 5
+  m_Name: Time Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7931789
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7931788}
+  m_LocalRotation: {x: 1, y: -0, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.3984392, y: -0.85357445, z: 0.50850576}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 574996157}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.8344, y: -0.6985}
+  m_SizeDelta: {x: 218.6434, y: 67.5159}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7931790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7931788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 68bbc2dccfea2c64fadfeb7a8fc33320, type: 3}
+    m_FontSize: 42
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 53
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 11:45am
+--- !u!222 &7931791
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7931788}
+  m_CullTransparentMesh: 1
 --- !u!1 &70558141
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,11 +369,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1c4097cc6cef1442b565c58a871131d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UI: {fileID: 0}
   dialogue: []
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
-  name: 
+  bookshelfName: Romance
 --- !u!114 &125478887 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2972329692303945110, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
@@ -556,7 +636,7 @@ RectTransform:
   m_GameObject: {fileID: 179979210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 1}
+  m_LocalScale: {x: 2.3714786, y: 1.1857393, z: 1.1857393}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1183935500}
@@ -566,7 +646,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -106, y: -104}
+  m_AnchoredPosition: {x: -133, y: -75}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &179979212
@@ -969,7 +1049,7 @@ GameObject:
   - component: {fileID: 492401852}
   - component: {fileID: 492401853}
   m_Layer: 0
-  m_Name: Foreign Language Bookshelves
+  m_Name: Fiction Bookshelves
   m_TagString: Bookshelf
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1050,11 +1130,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1c4097cc6cef1442b565c58a871131d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UI: {fileID: 0}
   dialogue: []
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
-  name: 
+  bookshelfName: Fiction
+--- !u!1 &556220783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 556220785}
+  - component: {fileID: 556220784}
+  m_Layer: 0
+  m_Name: UI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &556220784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556220783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e8a635b7e842644b17a70ea5f218bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notifyText: {fileID: 0}
+  timeText: {fileID: 7931790}
+  dayText: {fileID: 1318477769}
+  stockImage: {fileID: 70558143}
+  objectBox: {fileID: 1183935499}
+  dialogueText: {fileID: 912103281}
+  dialogueBox: {fileID: 1849483694}
+  dialogueWaitTime: 6000
+--- !u!4 &556220785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556220783}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &574996156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,14 +1215,15 @@ RectTransform:
   m_GameObject: {fileID: 574996156}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1, y: -0.7, z: 1}
+  m_LocalScale: {x: 0.68068236, y: -0.43316147, z: 0.61880213}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7931789}
   m_Father: {fileID: 179979211}
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -55, y: 0}
+  m_AnchoredPosition: {x: -34, y: -24}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &574996158
@@ -1290,11 +1424,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1c4097cc6cef1442b565c58a871131d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UI: {fileID: 0}
   dialogue: []
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
-  name: 
+  bookshelfName: Educational
 --- !u!1 &681839831
 GameObject:
   m_ObjectHideFlags: 0
@@ -3913,6 +4048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a73e3079badaacf4ba70e42ae8df1f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UI: {fileID: 0}
   dialogue:
   - These are boxes.
   stocks:
@@ -3922,6 +4058,7 @@ MonoBehaviour:
   stockPrefabs:
   - {fileID: 3116386105220306924, guid: c8077c402abf26746b92c481f78733a9, type: 3}
   - {fileID: 3116386105220306924, guid: fbf206f29517ec745b3b3662f679d755, type: 3}
+  - {fileID: 3116386105220306924, guid: 9747af7b1fb7c0a46aac0e0488d8254f, type: 3}
   inventory: {fileID: 0}
   player: {fileID: 125478887}
 --- !u!1001 &911702128
@@ -3986,6 +4123,87 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 195864525461142530, guid: a0c68219d5e9da245a429e3f1c226be6, type: 3}
   m_PrefabInstance: {fileID: 911702128}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &912103279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 912103280}
+  - component: {fileID: 912103282}
+  - component: {fileID: 912103281}
+  m_Layer: 5
+  m_Name: Dialogue Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &912103280
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912103279}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.10912718, y: 0.3731121, z: 0.3731121}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1849483695}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.43522274, y: 1.6259}
+  m_SizeDelta: {x: 780.9839, y: 158.8027}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &912103281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912103279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 68bbc2dccfea2c64fadfeb7a8fc33320, type: 3}
+    m_FontSize: 42
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 53
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '...
+
+'
+--- !u!222 &912103282
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912103279}
+  m_CullTransparentMesh: 1
 --- !u!1001 &963080932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4621,11 +4839,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1c4097cc6cef1442b565c58a871131d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UI: {fileID: 0}
   dialogue: []
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
-  name: 
+  bookshelfName: ScienceFiction
 --- !u!1001 &1221042507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4777,14 +4996,15 @@ RectTransform:
   m_GameObject: {fileID: 1232739634}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.3, z: 0.70436794}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1318477768}
   m_Father: {fileID: 179979211}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -40, y: -10}
+  m_AnchoredPosition: {x: -25, y: -10}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1232739636
@@ -4824,6 +5044,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232739634}
+  m_CullTransparentMesh: 1
+--- !u!1 &1318477767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1318477768}
+  - component: {fileID: 1318477770}
+  - component: {fileID: 1318477769}
+  m_Layer: 5
+  m_Name: Day Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1318477768
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318477767}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.42735726, y: 0.9710117, z: 0.35196754}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1232739635}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 2.2880592, y: 2.410286}
+  m_SizeDelta: {x: 218.6434, y: 67.5159}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1318477769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318477767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 68bbc2dccfea2c64fadfeb7a8fc33320, type: 3}
+    m_FontSize: 42
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 53
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Monday
+--- !u!222 &1318477770
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318477767}
   m_CullTransparentMesh: 1
 --- !u!1001 &1396627925
 PrefabInstance:
@@ -4985,11 +5284,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1c4097cc6cef1442b565c58a871131d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UI: {fileID: 0}
   dialogue: []
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
-  name: 
+  bookshelfName: NonFiction
 --- !u!1 &1452760549
 GameObject:
   m_ObjectHideFlags: 0
@@ -5903,11 +6203,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1c4097cc6cef1442b565c58a871131d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UI: {fileID: 0}
   dialogue: []
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
-  name: Classics
+  bookshelfName: Classics
 --- !u!1 &1593626901
 GameObject:
   m_ObjectHideFlags: 0
@@ -6006,6 +6307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eb17b4175be8a544af5541bcb44d17f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UI: {fileID: 0}
   dialogue:
   - This is your friend, djungelskog <3
 --- !u!58 &1593626905
@@ -11979,7 +12281,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1849483695
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11991,14 +12293,15 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5.8937497, y: 1.175, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 912103280}
   m_Father: {fileID: 747639246}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 85}
+  m_AnchoredPosition: {x: 0, y: 84.999985}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.49999997}
 --- !u!114 &1849483696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12216,11 +12519,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1c4097cc6cef1442b565c58a871131d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UI: {fileID: 0}
   dialogue: []
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
-  name: 
+  bookshelfName: Mystery
 --- !u!1001 &1998543271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12614,3 +12918,4 @@ SceneRoots:
   - {fileID: 1886428828}
   - {fileID: 747639246}
   - {fileID: 1452760552}
+  - {fileID: 556220785}

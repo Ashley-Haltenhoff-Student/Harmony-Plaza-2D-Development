@@ -12,6 +12,7 @@ public class Boxes : InteractableObject
 
     void Start()
     {
+        UI = FindAnyObjectByType<UI>();
         inventory = player.GetComponent<Inventory>();
         CreateStock();
     }
@@ -20,7 +21,15 @@ public class Boxes : InteractableObject
     {
         if (allowInteraction && Input.GetKeyDown(KeyCode.E))
         {
-            inventory.AddToInventory(GetStock());
+            if (TryGetStock())
+            {
+                inventory.AddToInventory(GetStock());
+                print("successfully got try get stock");
+            }
+            else
+            {
+                UI.Notify("No more stock left");
+            }
         }
     }
 
@@ -33,11 +42,31 @@ public class Boxes : InteractableObject
         }
     }
 
+    public bool TryGetStock()
+    {
+        for (int i = 0; i <= stocks.Length - 1; i++)
+        {
+            if (stocks[i] != null)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public GameObject GetStock()
     {
-        int rnd = Random.Range(0, stocks.Length);
-        GameObject chosenStock = stocks[rnd];
-        RemoveStock(rnd);
+        GameObject chosenStock = null;
+
+        for (int i = 0; i < stocks.Length; i++)
+        {
+            if (stocks[i] != null)
+            {
+                chosenStock = stocks[i];
+                RemoveStock(i);
+                return chosenStock;
+            }
+        }
         return chosenStock;
     }
 

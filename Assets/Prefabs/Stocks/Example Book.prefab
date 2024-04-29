@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 421830865051579866}
   - component: {fileID: -3388832902027718429}
   m_Layer: 0
-  m_Name: Sense And Sensibility
+  m_Name: Example Book
   m_TagString: Stock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stockName: 
-  description: 
-  correctBookshelf: Classics
+  correctBookshelf: 
+  icon: {fileID: 0}

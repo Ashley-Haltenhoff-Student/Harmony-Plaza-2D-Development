@@ -7,17 +7,25 @@ namespace HarmonyPlaza
         [SerializeField] private GameObject item = null;
         [SerializeField] private Stock heldStock = null;
 
+        [SerializeField] private UI UI;
+
+        private void Start()
+        {
+            UI = FindAnyObjectByType<UI>();
+        }
+
         public void AddToInventory(GameObject itemGiven)
         {
+            
             if (item == null)
             {
                 item = itemGiven;
                 heldStock = item.GetComponent<Stock>();
-                print(item.name + "added to inventory");
+                UI.Notify(heldStock.GetStockName() + " added to inventory");
             }
             else
             {
-                print("there's already an object in your inventory");
+                UI.Notify("there's already an object in your inventory");
             }
         }
 

@@ -19,13 +19,17 @@ namespace HarmonyPlaza
                 {
                     if (CorrectBookshelf())
                     {
-                        UI.Notify("Book correctly stocked!");
+                        UI.PrintDialogue("Book correctly stocked!");
                         inventory.DestroyStock();
                     }
                     else
                     {
-                        UI.Notify("Wrong bookshelf :(");
+                        UI.PrintDialogue("Wrong bookshelf :(");
                     }
+                }
+                else
+                {
+                    UI.PrintDialogue(dialogue);
                 }
             }
         }

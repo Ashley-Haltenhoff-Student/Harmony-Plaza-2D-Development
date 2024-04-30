@@ -30,11 +30,11 @@ public class Boxes : InteractableObject
             {
                 if (inventory.GetItem() != null)
                 {
-                    UI.Notify("You can only hold one thing to stock at a time.");
+                    UI.PrintDialogue("You can only hold one thing to stock at a time.");
                 }
                 else
                 {
-                    UI.Notify("No more stock left");
+                    UI.PrintDialogue("No more stock left");
                 }
             }
         }

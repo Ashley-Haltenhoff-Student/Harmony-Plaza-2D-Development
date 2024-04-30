@@ -370,7 +370,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
-  dialogue: []
+  dialogue:
+  - This is a bookshelf.
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
@@ -922,9 +923,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
-  dialogue: []
+  dialogue:
+  - This is a bookshelf.
   player: {fileID: 125478887}
-  inventory: {fileID: 0}
+  inventory: {fileID: 491626438}
   stock: {fileID: 0}
   bookshelfName: History
 --- !u!61 &398225697
@@ -1232,7 +1234,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
-  dialogue: []
+  dialogue:
+  - This is a bookshelf.
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
@@ -1273,7 +1276,9 @@ MonoBehaviour:
   objectBox: {fileID: 1183935499}
   dialogueText: {fileID: 912103281}
   dialogueBox: {fileID: 1849483694}
-  dialogueWaitTime: 6000
+  charWaitTime: 0.08
+  dialogueDisappearTime: 2
+  isPrintingDialogue: 0
 --- !u!4 &556220785
 Transform:
   m_ObjectHideFlags: 0
@@ -1526,7 +1531,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
-  dialogue: []
+  dialogue:
+  - This is a bookshelf.
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
@@ -4964,7 +4970,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
-  dialogue: []
+  dialogue:
+  - This is a bookshelf.
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
@@ -6227,7 +6234,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
-  dialogue: []
+  dialogue:
+  - This is a bookshelf.
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
@@ -6333,6 +6341,7 @@ MonoBehaviour:
   UI: {fileID: 0}
   dialogue:
   - This is your friend, djungelskog <3
+  - He's friendly, I promise...
 --- !u!58 &1593626905
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -12304,7 +12313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1849483695
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12543,7 +12552,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
-  dialogue: []
+  dialogue:
+  - This is a bookshelf.
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}

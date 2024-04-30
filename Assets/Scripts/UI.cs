@@ -1,12 +1,12 @@
-using System.Threading;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace HarmonyPlaza 
 { 
-
     public class UI : MonoBehaviour
     {
+
         [SerializeField] private Text notifyText;
         [SerializeField] private Text timeText;
         [SerializeField] private Text dayText;
@@ -16,23 +16,70 @@ namespace HarmonyPlaza
 
         [SerializeField] private Text dialogueText;
         [SerializeField] private GameObject dialogueBox;
-        [SerializeField] private int dialogueWaitTime = 6000;
 
-        public void Notify(string message)
+        [SerializeField] private float charWaitTime = 0.08f;
+
+        public bool isPrintingDialogue = false;
+
+        public void PrintDialogue(string givenDialogue) 
+        { 
+            if (!isPrintingDialogue)
+            {
+                isPrintingDialogue = true;
+                dialogueBox.SetActive(true);
+                StartCoroutine(PrintStringSlowly(givenDialogue));
+                isPrintingDialogue = false;
+            }
+            else { print("Already printing dialogue"); }
+        }
+
+        public void PrintDialogue(string[] givenDialogue) 
+        { 
+            if (!isPrintingDialogue)
+            {
+                isPrintingDialogue = true;
+                dialogueBox.SetActive(true);
+                StartCoroutine(PrintStringArraySlowly(givenDialogue));
+            }
+            else { print("Already printing dialogue"); }
+        }
+
+        private IEnumerator PrintStringSlowly(string givenDialogue)
         {
-            //notifyText.text = message;
-            //for now I'm using dialogue box for notifications
+            string currentPrint = "";
+            foreach (char c in givenDialogue)
+            {
+                dialogueText.text = currentPrint += c;
+                yield return new WaitForSeconds(charWaitTime);
+            }
+            yield return new WaitForSeconds(3);
+            dialogueBox.SetActive(false);
+        }
 
+        private IEnumerator PrintStringArraySlowly(string[] givenDialogue)
+        {
+            foreach (string s in givenDialogue)
+            {
+                string currentPrint = "";
+                foreach (char c in s)
+                {
+                    dialogueText.text = currentPrint += c;
+                    yield return new WaitForSeconds(charWaitTime);
+                }
+                yield return StartCoroutine(WaitForKeyDown(KeyCode.RightArrow));
+            }
+            isPrintingDialogue = false;
 
-            //string currentPrint = "";
-            //foreach (char c in message)
-            //{
-            //    currentPrint += c;
-            //    dialogueText.text = currentPrint;
-            //    Thread.Sleep(200);
-            //}
+            yield return new WaitForSeconds(3);
+            dialogueBox.SetActive(false);
+        }
 
-            dialogueText.text = message;
+        private IEnumerator WaitForKeyDown(KeyCode keyCode)
+        {
+            while (!Input.GetKeyDown(keyCode))
+            {
+                yield return null;
+            }
         }
 
         public void SetStockIcon(Image givenImage)
@@ -42,26 +89,11 @@ namespace HarmonyPlaza
             stockImage.enabled = true;
         }
 
-        public void SetStockInactive()
-        {
-            stockImage.enabled = false;
-        }
+        public void SetStockInactive() {  stockImage.enabled = false; }
 
-        public void SetTime(int givenTime)
-        {
-            timeText.text = givenTime.ToString();
-        }
+        public void SetTime(int givenTime) { timeText.text = givenTime.ToString(); }
 
-        public void SetDay(string currentDay)
-        {
-            dayText.text = currentDay;
-        }
-
-        public void PrintDialogue(string dialogue)
-        {
-            dialogueText.text = dialogue;
-            dialogueBox.SetActive(true);
-        }
+        public void SetDay(string currentDay) { dayText.text = currentDay; }
 
     }
 }

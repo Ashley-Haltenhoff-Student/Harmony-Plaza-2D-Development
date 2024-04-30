@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace HarmonyPlaza { 
@@ -18,7 +19,7 @@ namespace HarmonyPlaza {
         {
             if (allowInteraction && Input.GetKeyDown(KeyCode.E))
             {
-                UI.Notify(dialogue[0]);
+                UI.PrintDialogue(dialogue);
             }
 
         }
@@ -35,14 +36,7 @@ namespace HarmonyPlaza {
             // UI scripting for object's name
         }
 
-        private void GoThroughDialogue()
-        {
-            foreach (string s in dialogue)
-            {
-                UI.Notify(s);
-            }
-        }
-
+        
 
     }
 }

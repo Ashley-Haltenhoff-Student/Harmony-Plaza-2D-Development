@@ -21,11 +21,11 @@ namespace HarmonyPlaza
             {
                 item = itemGiven;
                 heldStock = item.GetComponent<Stock>();
-                UI.Notify(heldStock.GetStockName() + " added to inventory");
+                UI.PrintDialogue(heldStock.GetStockName() + " added to inventory");
             }
             else
             {
-                UI.Notify("there's already an object in your inventory");
+                UI.PrintDialogue("there's already an object in your inventory");
             }
         }
 

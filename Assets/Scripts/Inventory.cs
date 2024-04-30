@@ -51,9 +51,8 @@ namespace HarmonyPlaza
             }
         }
 
-        public Stock GetStock()
-        {
-            return heldStock;
-        }
+        public Stock GetStock() { return heldStock; }
+
+        public GameObject GetItem() { return item; }
     }
 }

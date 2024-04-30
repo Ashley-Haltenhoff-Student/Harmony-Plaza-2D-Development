@@ -1,4 +1,5 @@
 using HarmonyPlaza;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Boxes : InteractableObject
@@ -24,11 +25,17 @@ public class Boxes : InteractableObject
             if (TryGetStock())
             {
                 inventory.AddToInventory(GetStock());
-                print("successfully got try get stock");
             }
             else
             {
-                UI.Notify("No more stock left");
+                if (inventory.GetItem() != null)
+                {
+                    UI.Notify("You can only hold one thing to stock at a time.");
+                }
+                else
+                {
+                    UI.Notify("No more stock left");
+                }
             }
         }
     }
@@ -37,18 +44,32 @@ public class Boxes : InteractableObject
     {
         for (int i = 0; i < stocks.Length; i++)
         {
-            int rnd = Random.Range(0, stockPrefabs.Length);
-            stocks[i] = Instantiate(stockPrefabs[rnd]);
+            while(stocks[i] == null)
+            {
+                int rnd = Random.Range(0, stockPrefabs.Length);
+                if (stockPrefabs[rnd] == null)
+                {
+                    continue;
+                }
+                else
+                {
+                    stocks[i] = Instantiate(stockPrefabs[rnd]);
+                    stockPrefabs[rnd] = null;
+                }
+            }
         }
     }
 
     public bool TryGetStock()
     {
-        for (int i = 0; i <= stocks.Length - 1; i++)
+        if (inventory.GetItem() == null)
         {
-            if (stocks[i] != null)
+            for (int i = 0; i <= stocks.Length - 1; i++)
             {
-                return true;
+                if (stocks[i] != null)
+                {
+                    return true;
+                }
             }
         }
         return false;

@@ -27,8 +27,7 @@ namespace HarmonyPlaza
             {
                 isPrintingDialogue = true;
                 dialogueBox.SetActive(true);
-                StartCoroutine(PrintStringSlowly(givenDialogue));
-                isPrintingDialogue = false;
+                StartCoroutine(PrintStringSlowly(givenDialogue, false));
             }
             else { print("Already printing dialogue"); }
         }
@@ -39,12 +38,20 @@ namespace HarmonyPlaza
             {
                 isPrintingDialogue = true;
                 dialogueBox.SetActive(true);
-                StartCoroutine(PrintStringArraySlowly(givenDialogue));
+                print(dialogueBox.activeSelf);
+
+                bool isLastDialogue = false;
+                for (int i = 0; i <= givenDialogue.Length - 1; i++)
+                {
+                    if (i == givenDialogue.Length) { isLastDialogue = true; }
+                    StartCoroutine(PrintStringSlowly(givenDialogue[i], isLastDialogue));
+                }
+                dialogueBox.SetActive(false);
             }
             else { print("Already printing dialogue"); }
         }
 
-        private IEnumerator PrintStringSlowly(string givenDialogue)
+        private IEnumerator PrintStringSlowly(string givenDialogue, bool isLastDialogue)
         {
             string currentPrint = "";
             foreach (char c in givenDialogue)
@@ -52,31 +59,18 @@ namespace HarmonyPlaza
                 dialogueText.text = currentPrint += c;
                 yield return new WaitForSeconds(charWaitTime);
             }
-            yield return new WaitForSeconds(3);
-            dialogueBox.SetActive(false);
-        }
-
-        private IEnumerator PrintStringArraySlowly(string[] givenDialogue)
-        {
-            foreach (string s in givenDialogue)
-            {
-                string currentPrint = "";
-                foreach (char c in s)
-                {
-                    dialogueText.text = currentPrint += c;
-                    yield return new WaitForSeconds(charWaitTime);
-                }
-                yield return StartCoroutine(WaitForKeyDown(KeyCode.RightArrow));
-            }
             isPrintingDialogue = false;
+            yield return StartCoroutine(WaitForKeyDown(KeyCode.RightArrow));
 
-            yield return new WaitForSeconds(3);
-            dialogueBox.SetActive(false);
+            if (isLastDialogue)
+            {
+                dialogueBox.SetActive(false);
+            }
         }
 
         private IEnumerator WaitForKeyDown(KeyCode keyCode)
         {
-            while (!Input.GetKeyDown(keyCode))
+            while (!Input.GetKeyDown(keyCode) || isPrintingDialogue)
             {
                 yield return null;
             }
@@ -91,7 +85,7 @@ namespace HarmonyPlaza
 
         public void SetStockInactive() {  stockImage.enabled = false; }
 
-        public void SetTime(int givenTime) { timeText.text = givenTime.ToString(); }
+        public void SetTime(string givenTime) { timeText.text = givenTime; }
 
         public void SetDay(string currentDay) { dayText.text = currentDay; }
 

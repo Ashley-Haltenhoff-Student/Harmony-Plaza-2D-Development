@@ -20,57 +20,69 @@ namespace HarmonyPlaza
         [SerializeField] private float charWaitTime = 0.08f;
 
         public bool isPrintingDialogue = false;
+        public bool skipToFullText = false;
 
-        public void PrintDialogue(string givenDialogue) 
-        { 
-            if (!isPrintingDialogue)
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                isPrintingDialogue = true;
-                dialogueBox.SetActive(true);
-                StartCoroutine(PrintStringSlowly(givenDialogue, false));
+                skipToFullText = true;
             }
-            else { print("Already printing dialogue"); }
         }
 
-        public void PrintDialogue(string[] givenDialogue) 
-        { 
+        public void PrintDialogue(string givenDialogue)
+        {
             if (!isPrintingDialogue)
             {
-                isPrintingDialogue = true;
-                dialogueBox.SetActive(true);
-                print(dialogueBox.activeSelf);
-
-                bool isLastDialogue = false;
-                for (int i = 0; i <= givenDialogue.Length - 1; i++)
-                {
-                    if (i == givenDialogue.Length) { isLastDialogue = true; }
-                    StartCoroutine(PrintStringSlowly(givenDialogue[i], isLastDialogue));
-                }
-                dialogueBox.SetActive(false);
+                StartCoroutine(HandleDialogue(new string[] { givenDialogue }));
             }
-            else { print("Already printing dialogue"); }
+            else { Debug.Log("Already printing dialogue"); }
         }
 
-        private IEnumerator PrintStringSlowly(string givenDialogue, bool isLastDialogue)
+        public void PrintDialogue(string[] givenDialogue)
+        {
+            if (!isPrintingDialogue)
+            {
+                StartCoroutine(HandleDialogue(givenDialogue));
+            }
+            else { Debug.Log("Already printing dialogue"); }
+        }
+
+        private IEnumerator HandleDialogue(string[] dialogues)
+        {
+            isPrintingDialogue = true;
+            dialogueBox.SetActive(true);
+
+            foreach (string dialogue in dialogues)
+            {
+                yield return StartCoroutine(PrintStringSlowly(dialogue));
+                if (!skipToFullText) { yield return WaitForKeyDown(KeyCode.Space); }
+                skipToFullText = false;
+            }
+
+            dialogueBox.SetActive(false);
+            isPrintingDialogue = false;
+        }
+
+        private IEnumerator PrintStringSlowly(string givenDialogue)
         {
             string currentPrint = "";
             foreach (char c in givenDialogue)
             {
+                if (skipToFullText)
+                {
+                    dialogueText.text = givenDialogue;
+                    yield return WaitForKeyDown(KeyCode.Space);
+                    break;
+                }
                 dialogueText.text = currentPrint += c;
                 yield return new WaitForSeconds(charWaitTime);
-            }
-            isPrintingDialogue = false;
-            yield return StartCoroutine(WaitForKeyDown(KeyCode.RightArrow));
-
-            if (isLastDialogue)
-            {
-                dialogueBox.SetActive(false);
             }
         }
 
         private IEnumerator WaitForKeyDown(KeyCode keyCode)
         {
-            while (!Input.GetKeyDown(keyCode) || isPrintingDialogue)
+            while (!Input.GetKeyDown(keyCode))
             {
                 yield return null;
             }

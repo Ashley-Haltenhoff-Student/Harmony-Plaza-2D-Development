@@ -11,7 +11,7 @@ namespace HarmonyPlaza
         [SerializeField] private UI UI;
 
         private int hour = 8;
-        private int minute = 55;
+        private int minute = 0;
         private string timeOfDay = "am";
 
         private bool isSingleDigit = true;
@@ -37,7 +37,6 @@ namespace HarmonyPlaza
                     else if (timeOfDay == "am") { timeOfDay = "pm"; }
                 }
 
-                print($"{hour}:{zero}{minute}{timeOfDay}");
                 if (minute % 5 == 0) { UI.SetTime($"{hour}:{zero}{minute}{timeOfDay}"); }
                 yield return new WaitForSeconds(timeSpeed);
             }

@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stockName: That One Night We Talked
   correctBookshelf: Romance
-  icon: {fileID: 0}
+  icon: {fileID: 3561971957382529020, guid: f9d9c12cdb72cd0489ee96729bdf7ec8, type: 3}

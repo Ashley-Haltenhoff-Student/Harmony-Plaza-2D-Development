@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stockName: The Hoppit
   correctBookshelf: Fiction
-  icon: {fileID: 0}
+  icon: {fileID: 8947057560752541678, guid: 107f10f4faef0ee4c8ee74930b2f9988, type: 3}

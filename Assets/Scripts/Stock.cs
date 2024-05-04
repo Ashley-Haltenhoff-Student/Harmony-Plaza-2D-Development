@@ -7,7 +7,7 @@ namespace HarmonyPlaza
     {
         [SerializeField] private string stockName;
         [SerializeField] private string correctBookshelf;
-        [SerializeField] private Image icon;
+        [SerializeField] private Sprite icon;
 
         public string GetBookshelf()
         {
@@ -23,5 +23,7 @@ namespace HarmonyPlaza
         {
             stockName = givenName;
         }
+
+        public Sprite GetIcon() { return icon; }
     }
 }

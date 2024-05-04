@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stockName: How to Tell if a Girl Likes You
   correctBookshelf: Educational
-  icon: {fileID: 0}
+  icon: {fileID: -2199044483301205984, guid: fc2f1a79bad9141489386bfe9fcb4431, type: 3}

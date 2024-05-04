@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stockName: 1923
   correctBookshelf: History
-  icon: {fileID: 0}
+  icon: {fileID: 1003395694446038168, guid: 6d99963c37acf2f43835d6be566203ae, type: 3}

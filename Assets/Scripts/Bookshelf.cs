@@ -21,6 +21,7 @@ namespace HarmonyPlaza
                     {
                         UI.PrintDialogue("Book correctly stocked!");
                         inventory.DestroyStock();
+                        UI.SetObjectBoxInactive();
                     }
                     else
                     {

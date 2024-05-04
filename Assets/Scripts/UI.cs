@@ -6,6 +6,9 @@ namespace HarmonyPlaza
 { 
     public class UI : MonoBehaviour
     {
+        [SerializeField] private Player player;
+
+        [SerializeField] private GameObject map;
 
         [SerializeField] private Text notifyText;
         [SerializeField] private Text timeText;
@@ -24,9 +27,20 @@ namespace HarmonyPlaza
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space)) { skipToFullText = true; }
+
+            if (Input.GetKeyDown(KeyCode.Tab))
             {
-                skipToFullText = true;
+                if (map.activeSelf == true) 
+                { 
+                    map.SetActive(false);
+                    player.SetCanMove(true);
+                }
+                else 
+                { 
+                    map.SetActive(true); 
+                    player.SetCanMove(false);
+                }
             }
         }
 
@@ -50,6 +64,7 @@ namespace HarmonyPlaza
 
         private IEnumerator HandleDialogue(string[] dialogues)
         {
+            player.SetCanMove(false);
             isPrintingDialogue = true;
             dialogueBox.SetActive(true);
 
@@ -62,6 +77,7 @@ namespace HarmonyPlaza
 
             dialogueBox.SetActive(false);
             isPrintingDialogue = false;
+            player.SetCanMove(true);
         }
 
         private IEnumerator PrintStringSlowly(string givenDialogue)
@@ -88,14 +104,15 @@ namespace HarmonyPlaza
             }
         }
 
-        public void SetStockIcon(Image givenImage)
+        public void SetStockIcon(Sprite givenImage)
         {
-            stockImage = givenImage;
+            stockImage.sprite = givenImage;
             objectBox.SetActive(true);
-            stockImage.enabled = true;
+            
         }
 
-        public void SetStockInactive() {  stockImage.enabled = false; }
+        public void SetObjectBoxInactive() { objectBox.SetActive(false); }
+                                          
 
         public void SetTime(string givenTime) { timeText.text = givenTime; }
 

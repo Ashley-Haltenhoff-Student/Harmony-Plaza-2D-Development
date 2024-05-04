@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stockName: Humility and Justice
   correctBookshelf: Classics
-  icon: {fileID: 0}
+  icon: {fileID: -7329253388062902115, guid: 484b0018713a41b40b6021293e7a1bed, type: 3}

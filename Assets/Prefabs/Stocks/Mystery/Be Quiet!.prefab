@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stockName: Be Quiet!
   correctBookshelf: Mystery
-  icon: {fileID: 0}
+  icon: {fileID: 1083854717474061394, guid: c4a499c4910cdb445920ab54cfaf7ac5, type: 3}

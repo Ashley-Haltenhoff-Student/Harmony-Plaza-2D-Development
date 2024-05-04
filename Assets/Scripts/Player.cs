@@ -9,6 +9,8 @@ namespace HarmonyPlaza {
         public Animator animator;
         public float speed = 10f;
 
+        private bool canMove = true;
+
         void Start()
         {
             animator = GetComponent<Animator>();       
@@ -17,7 +19,7 @@ namespace HarmonyPlaza {
         void Update()
         {
 
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.D) && canMove)
             {
                 animator.SetBool("Right", true);
                 Walk(Vector3.right);
@@ -28,7 +30,7 @@ namespace HarmonyPlaza {
             }
 
 
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.W) && canMove)
             {
                 animator.SetBool("Up", true);
                 Walk(Vector3.up);
@@ -38,7 +40,7 @@ namespace HarmonyPlaza {
                 animator.SetBool("Up", false);
             }
 
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.A) && canMove)
             {
                 animator.SetBool("Left", true);
                 Walk(Vector3.left);
@@ -49,7 +51,7 @@ namespace HarmonyPlaza {
             }
 
 
-            if (Input.GetKey(KeyCode.S))
+            if (Input.GetKey(KeyCode.S) && canMove)
             {
                 animator.SetBool("Down", true);
                 Walk( Vector3.down);
@@ -65,6 +67,8 @@ namespace HarmonyPlaza {
         {
             transform.position += speed * Time.deltaTime * direction;
         }
+
+        public void SetCanMove(bool boolean) { canMove = boolean; }
 
     }
 }

@@ -1,6 +1,7 @@
 using HarmonyPlaza;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Boxes : InteractableObject
 {
@@ -9,7 +10,7 @@ public class Boxes : InteractableObject
     [SerializeField] private GameObject[] stockPrefabs;
     [SerializeField] private Inventory inventory;
     [SerializeField] private Player player;
-    
+    private GameObject chosenStock;
 
     void Start()
     {
@@ -24,7 +25,10 @@ public class Boxes : InteractableObject
         {
             if (TryGetStock())
             {
-                inventory.AddToInventory(GetStock());
+                chosenStock = GetStock();
+                inventory.AddToInventory(chosenStock);
+                Stock chosenStockDetails = chosenStock.GetComponent<Stock>();
+                UI.SetStockIcon(chosenStockDetails.GetIcon());
             }
             else
             {

@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stockName: Star Battles
   correctBookshelf: ScienceFiction
-  icon: {fileID: 0}
+  icon: {fileID: 957881200852291112, guid: 71427ee23baab63488dbbab9f638f9aa, type: 3}

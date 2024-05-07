@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: da3073faa61bdd6498d68539c483467e
+guid: 2ef061ba941d9d941820a897d01d6eca
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2268256440562240097
-    second: BathroomTile_0
+      213: 445201227363527645
+    second: Bookstore_Wall_Both_Corners_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -94,47 +94,11 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BathroomTile_0
+      name: Bookstore_Wall_Both_Corners_0
       rect:
         serializedVersion: 2
         x: 0
@@ -148,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f95bbc8f8c88580e0800000000000000
-      internalID: -2268256440562240097
+      spriteID: ddb2292582cad2600800000000000000
+      internalID: 445201227363527645
       vertices: []
       indices: 
       edges: []
@@ -164,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      BathroomTile_0: -2268256440562240097
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

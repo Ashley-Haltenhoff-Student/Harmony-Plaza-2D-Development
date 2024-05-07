@@ -383,9 +383,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
+  reactAnimator: {fileID: 0}
   dialogue:
   - This is a bookshelf.
   - It looks like it holds romance books.
+  react: 0
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
@@ -1043,9 +1045,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
+  reactAnimator: {fileID: 0}
   dialogue:
   - This is a bookshelf.
   - It looks like it holds history books.
+  react: 0
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
@@ -1355,13 +1359,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
+  reactAnimator: {fileID: 0}
   dialogue:
   - This is a bookshelf.
   - It looks like it holds fiction books.
+  react: 0
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
   bookshelfName: Fiction
+--- !u!1 &500102848 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3379586968228066187, guid: dc1ea48ebfbdf2c4b909b52fba1bb24b, type: 3}
+  m_PrefabInstance: {fileID: 9115045803420234631}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &556220783
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,8 +1464,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -57.492867, y: -33.13289}
-  m_SizeDelta: {x: 111.0284, y: 100}
+  m_AnchoredPosition: {x: -66.28046, y: -33.13289}
+  m_SizeDelta: {x: 130.5564, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &574996158
 MonoBehaviour:
@@ -1655,9 +1666,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
+  reactAnimator: {fileID: 0}
   dialogue:
   - This is a bookshelf.
   - It looks like it holds educational books.
+  react: 0
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
@@ -4228,8 +4241,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
+  reactAnimator: {fileID: 0}
   dialogue:
   - These are boxes.
+  react: 0
   stocks:
   - {fileID: 0}
   - {fileID: 0}
@@ -4770,9 +4785,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2972329692303945110, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
-      propertyPath: speed
-      value: 10
+    - target: {fileID: 1891083956164077015, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891083956164077015, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891083956164077015, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1022299287
       objectReference: {fileID: 0}
     - target: {fileID: 4040733312056664676, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4818,29 +4841,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6293190461720925631, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
-      propertyPath: items.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7020457836533421141, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7803960884021842548, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
-      propertyPath: offset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8617013780369604212, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
-      propertyPath: m_Size.y
-      value: 1.0610522
-      objectReference: {fileID: 0}
-    - target: {fileID: 8617013780369604212, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.619474
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7803960884021842548, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
-    - {fileID: 7343416191892482536, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5088,9 +5089,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
+  reactAnimator: {fileID: 0}
   dialogue:
   - This is a bookshelf.
   - It looks like it holds science fiction books.
+  react: 0
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
@@ -5254,8 +5257,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -44.5, y: -50.601345}
-  m_SizeDelta: {x: 91.3152, y: 100}
+  m_AnchoredPosition: {x: -53.987, y: -50.601345}
+  m_SizeDelta: {x: 115.03, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1232739636
 MonoBehaviour:
@@ -5559,6 +5562,70 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2275281548765413373, guid: dc1ea48ebfbdf2c4b909b52fba1bb24b, type: 3}
   m_PrefabInstance: {fileID: 9115045803420234631}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &1507105924
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500102848}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 2.622797, y: -2.5669918}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 6.9152412, y: 7.4732857}
+  m_EdgeRadius: 0
+--- !u!114 &1507105925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500102848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eb17b4175be8a544af5541bcb44d17f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UI: {fileID: 0}
+  reactAnimator: {fileID: 0}
+  dialogue:
+  - A cash register... to store cash.
+  - Also a cute little plant named momo!!
+  react: 0
 --- !u!1 &1519250911
 GameObject:
   m_ObjectHideFlags: 0
@@ -5656,8 +5723,8 @@ Tilemap:
   - first: {x: 18, y: 26, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5666,9 +5733,9 @@ Tilemap:
   - first: {x: 22, y: 26, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 2
-      m_TileMatrixIndex: 0
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 5
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
@@ -5676,8 +5743,8 @@ Tilemap:
   - first: {x: 26, y: 32, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5686,8 +5753,8 @@ Tilemap:
   - first: {x: 36, y: 32, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5726,9 +5793,9 @@ Tilemap:
   - first: {x: 50, y: 32, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 2
-      m_TileMatrixIndex: 0
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 5
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
@@ -5736,8 +5803,8 @@ Tilemap:
   - first: {x: -6, y: 44, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5786,9 +5853,9 @@ Tilemap:
   - first: {x: 12, y: 44, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 2
-      m_TileMatrixIndex: 0
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 5
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
@@ -5796,8 +5863,8 @@ Tilemap:
   - first: {x: 12, y: 58, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5806,8 +5873,8 @@ Tilemap:
   - first: {x: 16, y: 60, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5886,9 +5953,9 @@ Tilemap:
   - first: {x: 46, y: 60, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 2
-      m_TileMatrixIndex: 0
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 5
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
@@ -5896,8 +5963,8 @@ Tilemap:
   - first: {x: 0, y: 64, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5916,9 +5983,9 @@ Tilemap:
   - first: {x: 8, y: 64, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 2
-      m_TileMatrixIndex: 0
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 5
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
@@ -5927,27 +5994,27 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 27
+  - m_RefCount: 15
     m_Data: {fileID: 11400000, guid: 5d20c03b386012342a963ff787827786, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 2
+    m_Data: {fileID: 11400000, guid: 94814125064bd2042a47396975d9b4e4, type: 2}
+  - m_RefCount: 10
+    m_Data: {fileID: 11400000, guid: 445e86411189e1043ae77d031293f359, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 27
+  - m_RefCount: 15
     m_Data: {fileID: -5624181648725777256, guid: 2542f154474a9c2489cd04a3f5c12d3b, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 2
+    m_Data: {fileID: 445201227363527645, guid: 2ef061ba941d9d941820a897d01d6eca, type: 3}
+  - m_RefCount: 10
+    m_Data: {fileID: -4134095638789881622, guid: 1ba4b40b74ef08648aa85d9488cc0ab1, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 27
+  - m_RefCount: 22
     m_Data:
       e00: 1
       e01: 0
@@ -6037,24 +6104,24 @@ Tilemap:
       e31: 4.9e-43
       e32: 4.88e-43
       e33: 4.9e-43
-  - m_RefCount: 0
+  - m_RefCount: 5
     m_Data:
-      e00: NaN
+      e00: -1
       e01: 0
-      e02: -3.7500038
-      e03: -3.7500038
+      e02: 0
+      e03: 0
       e10: 0
-      e11: 0
-      e12: 4.86e-43
-      e13: 4.86e-43
-      e20: 1.1771146e+9
-      e21: 1.1082938e-19
-      e22: 5.6569435e-19
-      e23: 1.1082938e-19
-      e30: 4.5916e-41
-      e31: 4.9e-43
-      e32: 4.88e-43
-      e33: 4.9e-43
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
   m_TileColorArray:
   - m_RefCount: 27
     m_Data: {r: 1, g: 1, b: 1, a: 1}
@@ -6375,13 +6442,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
+  reactAnimator: {fileID: 0}
   dialogue:
   - This is a bookshelf.
   - It looks like it holds classic books.
+  react: 0
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
   bookshelfName: Classics
+--- !u!95 &1588621494 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7261984881354074366, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
+  m_PrefabInstance: {fileID: 1156149964}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1593626901
 GameObject:
   m_ObjectHideFlags: 0
@@ -6481,9 +6555,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
+  reactAnimator: {fileID: 1588621494}
   dialogue:
   - This is your friend, djungelskog <3
   - He's friendly, I promise...
+  react: 1
 --- !u!58 &1593626905
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -12832,8 +12908,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
+  reactAnimator: {fileID: 0}
   dialogue:
   - It's a painting of flowers.
+  react: 0
 --- !u!1 &1910491336
 GameObject:
   m_ObjectHideFlags: 0
@@ -12930,9 +13008,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
+  reactAnimator: {fileID: 0}
   dialogue:
   - This is a bookshelf.
   - It looks like it holds mystery books.
+  react: 0
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
@@ -13388,7 +13468,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3379586968228066187, guid: dc1ea48ebfbdf2c4b909b52fba1bb24b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1507105925}
+    - targetCorrespondingSourceObject: {fileID: 3379586968228066187, guid: dc1ea48ebfbdf2c4b909b52fba1bb24b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1507105924}
   m_SourcePrefab: {fileID: 100100000, guid: dc1ea48ebfbdf2c4b909b52fba1bb24b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

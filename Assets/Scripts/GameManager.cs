@@ -18,5 +18,10 @@ namespace HarmonyPlaza {
                 instance = this;
             }
         }
+
+        public void LoadBookstoreScene()
+        {
+            SceneManager.LoadScene("Bookstore");
+        }
     }
 }

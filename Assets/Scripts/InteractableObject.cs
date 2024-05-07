@@ -10,6 +10,7 @@ namespace HarmonyPlaza {
         protected bool allowInteraction = false;
         public string[] dialogue;
 
+
         private void Start()
         {
             UI = FindAnyObjectByType<UI>();

@@ -39,6 +39,7 @@ public class Boxes : InteractableObject
                 else
                 {
                     UI.PrintDialogue("No more stock left");
+                    UI.EndResult();
                 }
             }
         }

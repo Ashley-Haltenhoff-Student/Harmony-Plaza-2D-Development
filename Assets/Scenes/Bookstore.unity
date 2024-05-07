@@ -383,11 +383,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
-  reactAnimator: {fileID: 0}
   dialogue:
   - This is a bookshelf.
   - It looks like it holds romance books.
-  react: 0
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
@@ -1045,11 +1043,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
-  reactAnimator: {fileID: 0}
   dialogue:
   - This is a bookshelf.
   - It looks like it holds history books.
-  react: 0
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
@@ -1193,6 +1189,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneBuildIndex: 0
+  canTransition: 0
+  UI: {fileID: 556220784}
+  player: {fileID: 125478887}
+  cannotTransitionText:
+  - I shouldn't leave right now...
+  - I need to get to work.
 --- !u!61 &477894286
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1359,11 +1361,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
-  reactAnimator: {fileID: 0}
   dialogue:
   - This is a bookshelf.
   - It looks like it holds fiction books.
-  react: 0
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
@@ -1411,6 +1411,8 @@ MonoBehaviour:
   objectBox: {fileID: 1183935499}
   dialogueText: {fileID: 912103281}
   dialogueBox: {fileID: 1849483694}
+  endResultBox: {fileID: 0}
+  endResultText: {fileID: 1714150427}
   charWaitTime: 0.08
   isPrintingDialogue: 0
   skipToFullText: 0
@@ -1666,11 +1668,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
-  reactAnimator: {fileID: 0}
   dialogue:
   - This is a bookshelf.
   - It looks like it holds educational books.
-  react: 0
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
@@ -1878,6 +1878,7 @@ RectTransform:
   - {fileID: 1849483695}
   - {fileID: 179979211}
   - {fileID: 1659026995}
+  - {fileID: 1714150426}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4241,12 +4242,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
-  reactAnimator: {fileID: 0}
   dialogue:
   - These are boxes.
-  react: 0
   stocks:
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -4589,7 +4587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2505c37867a0fc4491e3445483a208a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeSpeed: 1
+  timeSpeed: 0.25
   UI: {fileID: 556220784}
 --- !u!1001 &1041593908
 PrefabInstance:
@@ -4799,11 +4797,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4040733312056664676, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.77
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 4040733312056664676, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.720001
+      value: 24.5
       objectReference: {fileID: 0}
     - target: {fileID: 4040733312056664676, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4836,6 +4834,10 @@ PrefabInstance:
     - target: {fileID: 4040733312056664676, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954798031445908573, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
+      propertyPath: m_Mass
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5397924450137375880, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
       propertyPath: m_Name
@@ -5089,11 +5091,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
-  reactAnimator: {fileID: 0}
   dialogue:
   - This is a bookshelf.
   - It looks like it holds science fiction books.
-  react: 0
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
@@ -5621,11 +5621,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
-  reactAnimator: {fileID: 0}
   dialogue:
   - A cash register... to store cash.
   - Also a cute little plant named momo!!
-  react: 0
 --- !u!1 &1519250911
 GameObject:
   m_ObjectHideFlags: 0
@@ -6442,20 +6440,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
-  reactAnimator: {fileID: 0}
   dialogue:
   - This is a bookshelf.
   - It looks like it holds classic books.
-  react: 0
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}
   bookshelfName: Classics
---- !u!95 &1588621494 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7261984881354074366, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
-  m_PrefabInstance: {fileID: 1156149964}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1593626901
 GameObject:
   m_ObjectHideFlags: 0
@@ -6555,11 +6546,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
-  reactAnimator: {fileID: 1588621494}
   dialogue:
   - This is your friend, djungelskog <3
   - He's friendly, I promise...
-  react: 1
 --- !u!58 &1593626905
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -12625,6 +12614,108 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708154976}
   m_CullTransparentMesh: 1
+--- !u!1 &1714150425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1714150426}
+  - component: {fileID: 1714150428}
+  - component: {fileID: 1714150427}
+  - component: {fileID: 1714150429}
+  m_Layer: 5
+  m_Name: You Win!!
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1714150426
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714150425}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 747639246}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 264.864, y: 88.992}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1714150427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714150425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 68bbc2dccfea2c64fadfeb7a8fc33320, type: 3}
+    m_FontSize: 45
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 45
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: You Win !!
+--- !u!222 &1714150428
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714150425}
+  m_CullTransparentMesh: 1
+--- !u!95 &1714150429
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714150425}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2a372f05f31660e4bba4d0bf29e709d7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1842980443
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12908,10 +12999,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
-  reactAnimator: {fileID: 0}
   dialogue:
   - It's a painting of flowers.
-  react: 0
 --- !u!1 &1910491336
 GameObject:
   m_ObjectHideFlags: 0
@@ -13008,11 +13097,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
-  reactAnimator: {fileID: 0}
   dialogue:
   - This is a bookshelf.
   - It looks like it holds mystery books.
-  react: 0
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
   stock: {fileID: 0}

@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class Boxes : InteractableObject
 {
-    
     [SerializeField] private GameObject[] stocks = new GameObject[3];
     [SerializeField] private GameObject[] stockPrefabs;
     [SerializeField] private Inventory inventory;
     [SerializeField] private Player player;
+    [SerializeField] private Text clockTime;
     private GameObject chosenStock;
 
     void Start()
@@ -40,6 +40,7 @@ public class Boxes : InteractableObject
                 {
                     UI.PrintDialogue("No more stock left");
                     UI.EndResult();
+                    print(clockTime.text);
                 }
             }
         }

@@ -120,5 +120,6 @@ namespace HarmonyPlaza
         public void SetDay(string currentDay) { dayText.text = currentDay; }
         public void EndResult() { endResultBox.SetActive(true); }
         public GameObject GetEndResult() { return endResultBox; }
+        public void SetEndResult(string resultText) { endResultText.text = resultText; }
     }
 }

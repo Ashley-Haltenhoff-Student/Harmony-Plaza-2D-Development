@@ -25,24 +25,30 @@ namespace HarmonyPlaza
 
         private IEnumerator UpdateClock()
         {
-            //while (hour != 5 && timeOfDay != "pm")
-            while (hour != 9)
+            while (hour != 5)
             {
-                
-                if (minute >= 59) { minute = 0; hour++; isSingleDigit = true; } else { minute++; }
+                if (minute >= 59) 
+                { 
+                    minute = 0; 
+                    if (hour == 12) { hour = 1; }
+                    else { hour++; }
+                    isSingleDigit = true; 
+                } 
+                else { minute++; }
+
                 if (minute >= 10) { isSingleDigit = false; }
                 if (isSingleDigit) { zero = "0"; } else { zero = "";}
-                if (hour == 12) 
-                { 
-                    if (timeOfDay == "pm") { timeOfDay = "am"; }
-                    else if (timeOfDay == "am") { timeOfDay = "pm"; }
+                if (hour == 12)
+                {
+                    timeOfDay = "pm";
                 }
 
                 if (minute == 0 || minute == 30) { UI.SetTime($"{hour}:{zero}{minute}{timeOfDay}"); }
                 yield return new WaitForSeconds(timeSpeed);
             }
             if (UI.GetEndResult().activeSelf == false) 
-            { 
+            {
+                UI.SetEndResult("You Lose!!");
                 UI.EndResult();
             }
         }

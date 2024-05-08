@@ -7,7 +7,7 @@ namespace HarmonyPlaza
 
     public class Clock : MonoBehaviour
     {
-        [SerializeField] private int timeSpeed = 1;
+        [SerializeField] private float timeSpeed = 1.0f;
         [SerializeField] private UI UI;
 
         private int hour = 8;
@@ -25,7 +25,8 @@ namespace HarmonyPlaza
 
         private IEnumerator UpdateClock()
         {
-            while (hour <= 8 && timeOfDay != "pm")
+            //while (hour != 5 && timeOfDay != "pm")
+            while (hour != 9)
             {
                 
                 if (minute >= 59) { minute = 0; hour++; isSingleDigit = true; } else { minute++; }
@@ -37,8 +38,12 @@ namespace HarmonyPlaza
                     else if (timeOfDay == "am") { timeOfDay = "pm"; }
                 }
 
-                if (minute % 5 == 0) { UI.SetTime($"{hour}:{zero}{minute}{timeOfDay}"); }
+                if (minute == 0 || minute == 30) { UI.SetTime($"{hour}:{zero}{minute}{timeOfDay}"); }
                 yield return new WaitForSeconds(timeSpeed);
+            }
+            if (UI.GetEndResult().activeSelf == false) 
+            { 
+                UI.EndResult();
             }
         }
     }

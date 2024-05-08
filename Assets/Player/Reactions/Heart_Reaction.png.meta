@@ -127,6 +127,42 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -392,7 +428,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Heart_Reaction_0: -8616277158621255379
+      Heart_Reaction_1: -679804991795494618
+      Heart_Reaction_10: 1546878549368113650
+      Heart_Reaction_11: 316907688885488971
+      Heart_Reaction_2: -6205032492689154154
+      Heart_Reaction_3: -7946189469594074810
+      Heart_Reaction_4: -3071212165965097631
+      Heart_Reaction_5: 9069353032058885924
+      Heart_Reaction_6: 1162531241461950676
+      Heart_Reaction_7: -8217085881254791507
+      Heart_Reaction_8: 9183617339300031428
+      Heart_Reaction_9: 2321874876185637043
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

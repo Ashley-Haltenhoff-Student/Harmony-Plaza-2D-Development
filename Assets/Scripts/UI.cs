@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +20,9 @@ namespace HarmonyPlaza
 
         [SerializeField] private Text dialogueText;
         [SerializeField] private GameObject dialogueBox;
+
+        [SerializeField] private GameObject endResultBox;
+        [SerializeField] private Text endResultText;
 
         [SerializeField] private float charWaitTime = 0.08f;
 
@@ -112,11 +116,9 @@ namespace HarmonyPlaza
         }
 
         public void SetObjectBoxInactive() { objectBox.SetActive(false); }
-                                          
-
         public void SetTime(string givenTime) { timeText.text = givenTime; }
-
         public void SetDay(string currentDay) { dayText.text = currentDay; }
-
+        public void EndResult() { endResultBox.SetActive(true); }
+        public GameObject GetEndResult() { return endResultBox; }
     }
 }

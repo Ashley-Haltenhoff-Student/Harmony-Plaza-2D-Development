@@ -1,4 +1,7 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 
 namespace HarmonyPlaza { 
@@ -10,6 +13,7 @@ namespace HarmonyPlaza {
         public float speed = 10f;
 
         private bool canMove = true;
+        private bool isColliding = false;
 
         void Start()
         {
@@ -22,7 +26,7 @@ namespace HarmonyPlaza {
             if (Input.GetKey(KeyCode.D) && canMove)
             {
                 animator.SetBool("Right", true);
-                Walk(Vector3.right);
+                if (!isColliding) { Walk(Vector3.right); }
             }
             else
             {
@@ -33,7 +37,7 @@ namespace HarmonyPlaza {
             if (Input.GetKey(KeyCode.W) && canMove)
             {
                 animator.SetBool("Up", true);
-                Walk(Vector3.up);
+                if (!isColliding) { Walk(Vector3.up); }
             }
             else
             {
@@ -43,7 +47,7 @@ namespace HarmonyPlaza {
             if (Input.GetKey(KeyCode.A) && canMove)
             {
                 animator.SetBool("Left", true);
-                Walk(Vector3.left);
+                if (!isColliding) { Walk(Vector3.left); }
             }
             else
             {
@@ -54,7 +58,7 @@ namespace HarmonyPlaza {
             if (Input.GetKey(KeyCode.S) && canMove)
             {
                 animator.SetBool("Down", true);
-                Walk( Vector3.down);
+                if (!isColliding) { Walk(Vector3.down); }
             }
             else
             {
@@ -70,5 +74,7 @@ namespace HarmonyPlaza {
 
         public void SetCanMove(bool boolean) { canMove = boolean; }
 
+        //private void OnCollisionStay2D(Collision2D collision) { isColliding = true; }
+        //private void OnCollisionExit2D(Collision2D collision) { isColliding = false; }
     }
 }

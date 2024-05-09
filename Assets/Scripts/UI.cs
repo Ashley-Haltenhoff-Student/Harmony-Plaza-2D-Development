@@ -10,7 +10,6 @@ namespace HarmonyPlaza
 
         [SerializeField] private GameObject map;
 
-        [SerializeField] private Text notifyText;
         [SerializeField] private Text timeText;
         [SerializeField] private Text dayText;
 

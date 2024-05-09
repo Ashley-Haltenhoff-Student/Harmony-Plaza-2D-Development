@@ -94,7 +94,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 32cd474219f4f584cbdfa77b8dcb7365, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 7931789}
   - component: {fileID: 7931791}
   - component: {fileID: 7931790}
+  - component: {fileID: 7931792}
   m_Layer: 5
   m_Name: Time Text
   m_TagString: Untagged
@@ -199,6 +200,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7931788}
   m_CullTransparentMesh: 1
+--- !u!95 &7931792
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7931788}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e86b4e852308570459e43113fd04742b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &70558141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1411,6 +1434,7 @@ MonoBehaviour:
   objectBox: {fileID: 1183935499}
   dialogueText: {fileID: 912103281}
   dialogueBox: {fileID: 1849483694}
+  dialogueContinueText: {fileID: 1517544162}
   endResultBox: {fileID: 1714150425}
   endResultText: {fileID: 1714150427}
   charWaitTime: 0.08
@@ -4587,6 +4611,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2505c37867a0fc4491e3445483a208a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeAnimator: {fileID: 7931792}
+  boxes: {fileID: 813853282}
   timeSpeed: 0.25
   UI: {fileID: 556220784}
 --- !u!1001 &1041593908
@@ -4837,7 +4863,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4954798031445908573, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
       propertyPath: m_Mass
-      value: 3
+      value: 1.937999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954798031445908573, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
+      propertyPath: m_UseAutoMass
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954798031445908573, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
+      propertyPath: m_SleepingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954798031445908573, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5397924450137375880, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
       propertyPath: m_Name
@@ -5309,6 +5347,7 @@ GameObject:
   - component: {fileID: 1318477768}
   - component: {fileID: 1318477770}
   - component: {fileID: 1318477769}
+  - component: {fileID: 1318477771}
   m_Layer: 5
   m_Name: Day Text
   m_TagString: Untagged
@@ -5377,6 +5416,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318477767}
   m_CullTransparentMesh: 1
+--- !u!95 &1318477771
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318477767}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b6024849e150c8742a56d64bc712bb5b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1396627925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5624,6 +5685,108 @@ MonoBehaviour:
   dialogue:
   - A cash register... to store cash.
   - Also a cute little plant named momo!!
+--- !u!1 &1517544162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1517544163}
+  - component: {fileID: 1517544165}
+  - component: {fileID: 1517544164}
+  - component: {fileID: 1517544166}
+  m_Layer: 5
+  m_Name: Continue Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1517544163
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517544162}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.10912718, y: 0.3731121, z: 0.3731121}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1849483695}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 33.785713, y: -34}
+  m_SizeDelta: {x: 232.20154, y: 41.3392}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1517544164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517544162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 68bbc2dccfea2c64fadfeb7a8fc33320, type: 3}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 53
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: SPACE TO CONTINUE
+--- !u!222 &1517544165
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517544162}
+  m_CullTransparentMesh: 1
+--- !u!95 &1517544166
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517544162}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cd7ce9c37b119ab409566506414ec4cd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1519250911
 GameObject:
   m_ObjectHideFlags: 0
@@ -6674,6 +6837,7 @@ GameObject:
   - component: {fileID: 1677019870}
   - component: {fileID: 1677019872}
   - component: {fileID: 1677019871}
+  - component: {fileID: 1677019873}
   m_Layer: 0
   m_Name: Tilemap_Floors
   m_TagString: Untagged
@@ -12539,6 +12703,35 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1677019873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677019869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 23800000, guid: 6597e0a92e0ecd647822eb8ff1309198, type: 2}
 --- !u!1 &1708154976
 GameObject:
   m_ObjectHideFlags: 0
@@ -12809,6 +13002,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 912103280}
+  - {fileID: 1517544163}
   m_Father: {fileID: 747639246}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}

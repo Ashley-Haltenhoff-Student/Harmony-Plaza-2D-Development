@@ -12,6 +12,8 @@ public class Boxes : InteractableObject
     [SerializeField] private Text clockTime;
     private GameObject chosenStock;
 
+    private bool startedStocking = false;
+
     void Start()
     {
         UI = FindAnyObjectByType<UI>();
@@ -74,6 +76,7 @@ public class Boxes : InteractableObject
             {
                 if (stocks[i] != null)
                 {
+                    if (stocks[i] == stocks[0]) { startedStocking = true; }
                     return true;
                 }
             }
@@ -101,4 +104,6 @@ public class Boxes : InteractableObject
     {
         stocks[index] = null;
     }
+
+    public bool GetStartedStalking() {  return startedStocking; }
 }

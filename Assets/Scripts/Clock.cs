@@ -1,4 +1,3 @@
-using HarmonyPlaza;
 using System.Collections;
 using UnityEngine;
 
@@ -7,6 +6,9 @@ namespace HarmonyPlaza
 
     public class Clock : MonoBehaviour
     {
+        [SerializeField] private Animator timeAnimator;
+        [SerializeField] private Boxes boxes;
+
         [SerializeField] private float timeSpeed = 1.0f;
         [SerializeField] private UI UI;
 
@@ -20,18 +22,20 @@ namespace HarmonyPlaza
         private void Start()
         {          
             StartCoroutine(UpdateClock());
-            
         }
 
         private IEnumerator UpdateClock()
         {
+            while (!boxes.GetStartedStalking()) { yield return null; }
             while (hour != 5)
             {
                 if (minute >= 59) 
                 { 
                     minute = 0; 
+                    
                     if (hour == 12) { hour = 1; }
                     else { hour++; }
+                    
                     isSingleDigit = true; 
                 } 
                 else { minute++; }
@@ -41,6 +45,7 @@ namespace HarmonyPlaza
                 if (hour == 12)
                 {
                     timeOfDay = "pm";
+                    
                 }
 
                 if (minute == 0 || minute == 30) { UI.SetTime($"{hour}:{zero}{minute}{timeOfDay}"); }

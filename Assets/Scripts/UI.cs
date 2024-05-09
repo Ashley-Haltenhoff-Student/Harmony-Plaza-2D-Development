@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,6 +19,7 @@ namespace HarmonyPlaza
 
         [SerializeField] private Text dialogueText;
         [SerializeField] private GameObject dialogueBox;
+        [SerializeField] private GameObject dialogueContinueText;
 
         [SerializeField] private GameObject endResultBox;
         [SerializeField] private Text endResultText;
@@ -31,7 +31,7 @@ namespace HarmonyPlaza
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space)) { skipToFullText = true; }
+            if (Input.GetKeyDown(KeyCode.Space) && isPrintingDialogue) { skipToFullText = true; }
 
             if (Input.GetKeyDown(KeyCode.Tab))
             {
@@ -75,8 +75,13 @@ namespace HarmonyPlaza
             foreach (string dialogue in dialogues)
             {
                 yield return StartCoroutine(PrintStringSlowly(dialogue));
-                if (!skipToFullText) { yield return WaitForKeyDown(KeyCode.Space); }
+                if (!skipToFullText) 
+                {
+                    dialogueContinueText.SetActive(true);
+                    yield return WaitForKeyDown(KeyCode.Space); 
+                }
                 skipToFullText = false;
+                dialogueContinueText.SetActive(false);
             }
 
             dialogueBox.SetActive(false);
@@ -92,7 +97,9 @@ namespace HarmonyPlaza
                 if (skipToFullText)
                 {
                     dialogueText.text = givenDialogue;
+                    dialogueContinueText.SetActive(true);
                     yield return WaitForKeyDown(KeyCode.Space);
+                    dialogueContinueText.SetActive(false);
                     break;
                 }
                 dialogueText.text = currentPrint += c;

@@ -6,42 +6,40 @@ namespace HarmonyPlaza
 { 
     public class UI : MonoBehaviour
     {
-        [SerializeField] private Player player;
+        [SerializeField] protected Player player;
 
-        [SerializeField] private GameObject map;
+        [SerializeField] protected Text timeText;
+        [SerializeField] protected Text dayText;
 
-        [SerializeField] private Text timeText;
-        [SerializeField] private Text dayText;
+        [SerializeField] protected Text dialogueText;
+        [SerializeField] protected GameObject dialogueBox;
+        [SerializeField] protected GameObject dialogueContinueText;
 
+        [SerializeField] protected float charWaitTime = 0.08f;
+
+        [SerializeField] private GameObject inventory;
         [SerializeField] private Image stockImage;
         [SerializeField] private GameObject objectBox;
-
-        [SerializeField] private Text dialogueText;
-        [SerializeField] private GameObject dialogueBox;
-        [SerializeField] private GameObject dialogueContinueText;
-
         [SerializeField] private GameObject endResultBox;
         [SerializeField] private Text endResultText;
 
-        [SerializeField] private float charWaitTime = 0.08f;
+        protected bool isPrintingDialogue = false;
+        protected bool skipToFullText = false;
 
-        public bool isPrintingDialogue = false;
-        public bool skipToFullText = false;
-
-        private void Update()
+        protected void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space) && isPrintingDialogue) { skipToFullText = true; }
 
-            if (Input.GetKeyDown(KeyCode.Tab))
+            if (inventory != null && Input.GetKeyDown(KeyCode.Tab))
             {
-                if (map.activeSelf == true) 
+                if (inventory.activeSelf == true) 
                 { 
-                    map.SetActive(false);
+                    inventory.SetActive(false);
                     player.SetCanMove(true);
                 }
                 else 
                 { 
-                    map.SetActive(true); 
+                    inventory.SetActive(true); 
                     player.SetCanMove(false);
                 }
             }
@@ -65,7 +63,7 @@ namespace HarmonyPlaza
             else { Debug.Log("Already printing dialogue"); }
         }
 
-        private IEnumerator HandleDialogue(string[] dialogues)
+        protected IEnumerator HandleDialogue(string[] dialogues)
         {
             player.SetCanMove(false);
             isPrintingDialogue = true;
@@ -88,7 +86,7 @@ namespace HarmonyPlaza
             player.SetCanMove(true);
         }
 
-        private IEnumerator PrintStringSlowly(string givenDialogue)
+        protected IEnumerator PrintStringSlowly(string givenDialogue)
         {
             string currentPrint = "";
             foreach (char c in givenDialogue)
@@ -106,7 +104,7 @@ namespace HarmonyPlaza
             }
         }
 
-        private IEnumerator WaitForKeyDown(KeyCode keyCode)
+        protected IEnumerator WaitForKeyDown(KeyCode keyCode)
         {
             while (!Input.GetKeyDown(keyCode))
             {

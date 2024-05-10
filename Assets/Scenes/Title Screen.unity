@@ -441,6 +441,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneBuildIndex: 2
+  canTransition: 1
+  UI: {fileID: 0}
+  player: {fileID: 0}
+  cannotTransitionText: []
 --- !u!61 &295818572
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -996,14 +1000,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 849983235}
         m_TargetAssemblyTypeName: HarmonyPlaza.GameManager, Assembly-CSharp
-        m_MethodName: LoadBookstoreScene
-        m_Mode: 1
+        m_MethodName: LoadScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MainMallArea
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &500539006
@@ -24489,6 +24493,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneBuildIndex: 1
+  canTransition: 1
+  UI: {fileID: 0}
+  player: {fileID: 0}
+  cannotTransitionText: []
 --- !u!61 &2135480436
 BoxCollider2D:
   m_ObjectHideFlags: 0

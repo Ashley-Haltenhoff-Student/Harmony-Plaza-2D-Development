@@ -13,7 +13,6 @@ namespace HarmonyPlaza {
         public float speed = 10f;
 
         private bool canMove = true;
-        private bool isColliding = false;
 
         void Start()
         {
@@ -74,7 +73,7 @@ namespace HarmonyPlaza {
 
         public void SetCanMove(bool boolean) { canMove = boolean; }
 
-        private void OnCollisionStay2D(Collision2D collision) { isColliding = true; }
-        private void OnCollisionExit2D(Collision2D collision) { isColliding = false; }
+        //private void OnCollisionStay2D(Collision2D collision) { isColliding = true; }
+        //private void OnCollisionExit2D(Collision2D collision) { isColliding = false; }
     }
 }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5683ab41412ff6e45be919b83a34e0b7
+guid: 825e5313443639344a374a4ab903ef67
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3540433322725218077
-    second: DarkGrayTiles_2_0
+      213: 8189388430000109229
+    second: DarkGray_Tile_2_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -94,47 +94,11 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DarkGrayTiles_2_0
+      name: DarkGray_Tile_2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -148,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3e8e108a6aadddec0800000000000000
-      internalID: -3540433322725218077
+      spriteID: da6b9d9436d86a170800000000000000
+      internalID: 8189388430000109229
       vertices: []
       indices: 
       edges: []
@@ -165,7 +129,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DarkGrayTiles_2_0: -3540433322725218077
+      DarkGray_Tile_2_0: 8189388430000109229
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -11,7 +11,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -4021659137240936164}
-    m_Position: {x: 250, y: 40, z: 0}
+    m_Position: {x: 270, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2427023920273767846}
     m_Position: {x: 260, y: 180, z: 0}
@@ -84,7 +84,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RoomTransition
+  m_Name: RoomTransition 1
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: FadeOut

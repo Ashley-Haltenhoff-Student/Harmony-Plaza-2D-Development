@@ -13773,6 +13773,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
   animator: {fileID: 0}
+  possibleActions: []
+  possibleActionNames: []
 --- !u!212 &2022382037
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14103,13 +14105,57 @@ PrefabInstance:
       propertyPath: m_Name
       value: Customer_1
       objectReference: {fileID: 0}
+    - target: {fileID: 7262411491096098177, guid: 1f244e3a3b57a9948afd768f2956a4a0, type: 3}
+      propertyPath: possibleActions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7262411491096098177, guid: 1f244e3a3b57a9948afd768f2956a4a0, type: 3}
+      propertyPath: possibleActionNames.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7262411491096098177, guid: 1f244e3a3b57a9948afd768f2956a4a0, type: 3}
+      propertyPath: possibleActions.Array.data[0].x
+      value: -13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7262411491096098177, guid: 1f244e3a3b57a9948afd768f2956a4a0, type: 3}
+      propertyPath: possibleActions.Array.data[0].y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7262411491096098177, guid: 1f244e3a3b57a9948afd768f2956a4a0, type: 3}
+      propertyPath: possibleActions.Array.data[1].x
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7262411491096098177, guid: 1f244e3a3b57a9948afd768f2956a4a0, type: 3}
+      propertyPath: possibleActions.Array.data[1].y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7262411491096098177, guid: 1f244e3a3b57a9948afd768f2956a4a0, type: 3}
+      propertyPath: possibleActions.Array.data[2].x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7262411491096098177, guid: 1f244e3a3b57a9948afd768f2956a4a0, type: 3}
+      propertyPath: possibleActions.Array.data[2].y
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7262411491096098177, guid: 1f244e3a3b57a9948afd768f2956a4a0, type: 3}
+      propertyPath: 'possibleActionNames.Array.data[0]'
+      value: Classic Books
+      objectReference: {fileID: 0}
+    - target: {fileID: 7262411491096098177, guid: 1f244e3a3b57a9948afd768f2956a4a0, type: 3}
+      propertyPath: 'possibleActionNames.Array.data[1]'
+      value: History Books
+      objectReference: {fileID: 0}
+    - target: {fileID: 7262411491096098177, guid: 1f244e3a3b57a9948afd768f2956a4a0, type: 3}
+      propertyPath: 'possibleActionNames.Array.data[2]'
+      value: Mystery Books
+      objectReference: {fileID: 0}
     - target: {fileID: 7373576924416671111, guid: 1f244e3a3b57a9948afd768f2956a4a0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.28
+      value: -14.01
       objectReference: {fileID: 0}
     - target: {fileID: 7373576924416671111, guid: 1f244e3a3b57a9948afd768f2956a4a0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 25
+      value: 16.09
       objectReference: {fileID: 0}
     - target: {fileID: 7373576924416671111, guid: 1f244e3a3b57a9948afd768f2956a4a0, type: 3}
       propertyPath: m_LocalPosition.z

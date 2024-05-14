@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7373576924416671111}
   - component: {fileID: 417509150966170312}
   - component: {fileID: 856775409156595762}
+  - component: {fileID: 7262411491096098177}
+  - component: {fileID: 6164353139203698668}
   m_Layer: 0
   m_Name: Customer_1
   m_TagString: Untagged
@@ -107,3 +109,39 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7262411491096098177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429932305710338034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b3cbb73c58794a4aa01e5260ffc8e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 6164353139203698668}
+  animator: {fileID: 0}
+--- !u!195 &6164353139203698668
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429932305710338034}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.61
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2.66
+  m_BaseOffset: 1.33
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

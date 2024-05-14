@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1313083472981499884}
   - component: {fileID: 7898130393881412095}
   - component: {fileID: 5261223837830599715}
+  - component: {fileID: 8874717551069448311}
   m_Layer: 0
   m_Name: Bookstore_Cabinet_Register_BOTTOM
   m_TagString: Untagged
@@ -131,6 +132,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 6, y: 2.3396225}
   m_EdgeRadius: 0
+--- !u!114 &8874717551069448311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240995129927923859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &3379586968228066187
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,6 +191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8270261113564274905}
   - component: {fileID: 6304832394577172728}
+  - component: {fileID: 536792086501330188}
   m_Layer: 0
   m_Name: Bookstore_Cabinet_Register_TOP
   m_TagString: Untagged
@@ -248,3 +266,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &536792086501330188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5209489928397747116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff

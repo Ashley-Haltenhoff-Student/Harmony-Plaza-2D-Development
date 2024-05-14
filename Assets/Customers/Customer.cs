@@ -1,3 +1,5 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -14,20 +16,22 @@ public class Customer : MonoBehaviour
     [SerializeField] Vector3[] possibleActions;
     [SerializeField] string[] possibleActionNames;
 
+    private int lastPoint;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+
+        SetTargetPosition();
     }
 
     void Update()
     {
-        SetTargetPosition();
-
+        if (transform.position.x == target.x && transform.position.y == target.y) { print("reached position");  SetTargetPosition(); }
         Animate();
-
         SetAgentPosition();
     }
 
@@ -39,7 +43,7 @@ public class Customer : MonoBehaviour
         target = GetAction(rnd);
     }
 
-    private Vector3 GetAction(int rndNum) { return possibleActions[rndNum - 1]; }
+    private Vector3 GetAction(int rndNum) { return possibleActions[rndNum]; }
     private string GetActionName(int rndNum) { return possibleActionNames[rndNum - 1]; }
 
     private void SetAgentPosition()

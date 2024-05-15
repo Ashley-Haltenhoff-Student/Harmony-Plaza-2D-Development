@@ -57,6 +57,9 @@ namespace HarmonyPlaza
                 UI.EndResult();
             }
         }
+
+        public int GetHour() { return hour; }
+        public int GetMinute() { return minute; }
     }
 }
 

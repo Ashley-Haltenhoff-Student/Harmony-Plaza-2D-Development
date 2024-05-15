@@ -7,16 +7,16 @@ public class Customer : MonoBehaviour
 {
     [SerializeField] NavMeshAgent agent;
     [SerializeField] Animator animator;
-    private Vector3 target;
+
+    [SerializeField] private Vector3[] possibleActions;
+    public bool[] isNotAvailableActions;
 
     private Vector3 normalizedMovement;
     private Vector3 forwardVector;
     private Vector3 rightVector;
+    public Vector3 target;
 
-    [SerializeField] Vector3[] possibleActions;
-    [SerializeField] string[] possibleActionNames;
-
-    private int lastPoint;
+    private int lastPositionIndex;
 
     void Start()
     {
@@ -25,32 +25,39 @@ public class Customer : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
 
+        isNotAvailableActions = new bool[possibleActions.Length];
         SetTargetPosition();
     }
 
     void Update()
     {
-        if (transform.position.x == target.x && transform.position.y == target.y) { print("reached position");  SetTargetPosition(); }
+        if (transform.position.x == target.x && Mathf.Abs(transform.position.y - target.y) < 0.001) 
+        {
+            print("has the same y coord");
+            isNotAvailableActions[lastPositionIndex] = true;
+            SetTargetPosition();
+        }
         Animate();
         SetAgentPosition();
     }
 
     private void SetTargetPosition()
     {
-        int rnd = Random.Range(1, possibleActions.Length);
-        print(gameObject.name + " = " + GetActionName(rnd));
+        int rnd = Random.Range(0, possibleActions.Length);
+        //if (isNotAvailableActions[rnd] == true)
+        //{
+         //   rnd = Random.Range(0, possibleActions.Length);
+        //}
 
+        lastPositionIndex = rnd;
         target = GetAction(rnd);
     }
-
-    private Vector3 GetAction(int rndNum) { return possibleActions[rndNum]; }
-    private string GetActionName(int rndNum) { return possibleActionNames[rndNum - 1]; }
 
     private void SetAgentPosition()
     {
         agent.SetDestination(new Vector3(target.x, target.y, transform.position.z));
     }
-
+    
     private void Animate()
     {
         normalizedMovement = agent.desiredVelocity.normalized;
@@ -70,4 +77,9 @@ public class Customer : MonoBehaviour
         else { animator.SetBool("Left", false); }
     }
 
+    private Vector3 GetAction(int rndNum) 
+    {
+        isNotAvailableActions[rndNum] = false;
+        return possibleActions[rndNum]; 
+    }
 }

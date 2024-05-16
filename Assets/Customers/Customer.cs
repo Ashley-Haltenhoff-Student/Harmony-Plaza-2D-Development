@@ -31,7 +31,7 @@ public class Customer : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.x == target.x && Mathf.Abs(transform.position.y - target.y) < 0.001) 
+        if (transform.position.x == target.x && Mathf.Abs(transform.position.y - target.y) < 0.001)
         {
             print("has the same y coord");
             isNotAvailableActions[lastPositionIndex] = true;
@@ -43,11 +43,8 @@ public class Customer : MonoBehaviour
 
     private void SetTargetPosition()
     {
+        //int rnd = Random.Range(0, CheckAvailablePoints().Length);
         int rnd = Random.Range(0, possibleActions.Length);
-        //if (isNotAvailableActions[rnd] == true)
-        //{
-         //   rnd = Random.Range(0, possibleActions.Length);
-        //}
 
         lastPositionIndex = rnd;
         target = GetAction(rnd);
@@ -57,18 +54,18 @@ public class Customer : MonoBehaviour
     {
         agent.SetDestination(new Vector3(target.x, target.y, transform.position.z));
     }
-    
+
     private void Animate()
     {
         normalizedMovement = agent.desiredVelocity.normalized;
-        forwardVector = Vector3.Project(normalizedMovement, transform.up);
+        //forwardVector = Vector3.Project(normalizedMovement, transform.up);
         rightVector = Vector3.Project(normalizedMovement, transform.right);
 
-        if (forwardVector.y > 0.10f) { animator.SetBool("Up", true); }
-        else { animator.SetBool("Up", false); }
+        //if (forwardVector.y > 0.9f) { animator.SetBool("Up", true); }
+        //else { animator.SetBool("Up", false); }
 
-        if (forwardVector.y < -0.10f) { animator.SetBool("Down", true); }
-        else { animator.SetBool("Down", false); }
+        //if (forwardVector.y < System.Math.Abs(-0.08f)) { animator.SetBool("Down", true); }
+        //else { animator.SetBool("Down", false); }
 
         if (rightVector.x > 0) { animator.SetBool("Right", true); }
         else { animator.SetBool("Right", false); }
@@ -77,9 +74,26 @@ public class Customer : MonoBehaviour
         else { animator.SetBool("Left", false); }
     }
 
-    private Vector3 GetAction(int rndNum) 
+    private Vector3 GetAction(int rndNum)
     {
+        //Vector3[] availablePoints = CheckAvailablePoints();
         isNotAvailableActions[rndNum] = false;
-        return possibleActions[rndNum]; 
+        //return availablePoints[rndNum];
+        return possibleActions[rndNum];
+    }
+
+    private Vector3[] CheckAvailablePoints()
+    {
+        int num = 0-1;
+        foreach (bool boolean in isNotAvailableActions) { if (boolean == false) { num++; } }
+
+        Vector3[] availablePoints = new Vector3[num];
+        int num2 = 0;
+
+        for (int i = 0; i < possibleActions.Length; i++)
+        {
+            if (isNotAvailableActions[i] == false) { availablePoints[num] = possibleActions[i]; num2++; }
+        }
+        return availablePoints;
     }
 }

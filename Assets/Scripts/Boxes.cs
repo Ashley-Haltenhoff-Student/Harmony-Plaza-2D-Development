@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Boxes : InteractableObject
 {
+    [SerializeField] private Tutorial tutorial;
+
     [SerializeField] private GameObject[] stocks = new GameObject[3];
     [SerializeField] private GameObject[] stockPrefabs;
     [SerializeField] private Inventory inventory;
@@ -41,8 +43,7 @@ public class Boxes : InteractableObject
                 else
                 {
                     UI.PrintDialogue("No more stock left");
-                    UI.EndResult();
-                    print(clockTime.text);
+                    print("Stock Completed at " + clockTime.text);
                 }
             }
         }
@@ -76,7 +77,11 @@ public class Boxes : InteractableObject
             {
                 if (stocks[i] != null)
                 {
-                    if (stocks[i] == stocks[0]) { startedStocking = true; }
+                    if (stocks[i] == stocks[0]) 
+                    { 
+                        startedStocking = true;
+                        tutorial.StartTutorial();
+                    }
                     return true;
                 }
             }

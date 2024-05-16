@@ -51,11 +51,7 @@ namespace HarmonyPlaza
                 if (minute == 0 || minute == 30) { UI.SetTime($"{hour}:{zero}{minute}{timeOfDay}"); }
                 yield return new WaitForSeconds(timeSpeed);
             }
-            if (UI.GetEndResult().activeSelf == false) 
-            {
-                UI.SetEndResult("You Lose!!");
-                UI.EndResult();
-            }
+            UI.EndResult();
         }
 
         public int GetHour() { return hour; }

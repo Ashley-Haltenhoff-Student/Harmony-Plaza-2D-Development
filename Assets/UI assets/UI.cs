@@ -7,6 +7,7 @@ namespace HarmonyPlaza
     public class UI : MonoBehaviour
     {
         [SerializeField] protected Player player;
+        [SerializeField] private Tutorial tutorial;
 
         [SerializeField] protected Text timeText;
         [SerializeField] protected Text dayText;
@@ -23,8 +24,8 @@ namespace HarmonyPlaza
         [SerializeField] private GameObject endResultBox;
         [SerializeField] private Text endResultText;
 
-        protected bool isPrintingDialogue = false;
-        protected bool skipToFullText = false;
+        public bool isPrintingDialogue = false;
+        public bool skipToFullText = false;
 
         protected void Update()
         {
@@ -65,6 +66,7 @@ namespace HarmonyPlaza
 
         protected IEnumerator HandleDialogue(string[] dialogues)
         {
+            while (tutorial.isGoingThroughTutorial) { yield return null; }
             player.SetCanMove(false);
             isPrintingDialogue = true;
             dialogueBox.SetActive(true);

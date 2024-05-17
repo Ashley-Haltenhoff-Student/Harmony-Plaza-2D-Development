@@ -26,7 +26,7 @@ namespace HarmonyPlaza
 
         private IEnumerator UpdateClock()
         {
-            while (!boxes.GetStartedStalking()) { yield return null; }
+            while (!boxes.GetStartedStocking()) { yield return null; }
             while (hour != 5)
             {
                 if (minute >= 59) 

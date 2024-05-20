@@ -29,44 +29,17 @@ public class Tutorial : MonoBehaviour
             gameObject.SetActive(true);
             player.SetCanMove(false);
 
-            StartCoroutine(PrintTutorial(dialogue));
+            StartCoroutine(WaitToEndTutorial(KeyCode.Space));
         }
     }
 
-    private IEnumerator WaitForKeyDown(KeyCode keyCode)
+    private IEnumerator WaitToEndTutorial(KeyCode key)
     {
-        continueText.SetActive(true);
-        while (!Input.GetKeyDown(keyCode))
-        {
-            yield return null;
-        }
-        continueText.SetActive(false);
-    }
-
-    private IEnumerator PrintTutorial(string[] dialogue)
-    {
-        string currentPrint = "";
-        foreach (string s in dialogue)
-        {
-            continueText.SetActive(false);
-            foreach (char c in s)
-            {
-                boxText.text = currentPrint += c;
-                yield return new WaitForSeconds(0.08f);
-            }
-            continueText.SetActive(true);
-            yield return WaitForKeyDown(KeyCode.Space);
-        }
-
-        continueText.SetActive(true);
-        while (!Input.GetKeyDown(KeyCode.Space))
-        {
-            yield return null;
-        }
-        continueText.SetActive(false);
+        while (!Input.GetKey(key)) { yield return null; }
         animator.SetTrigger("EndTutorial");
-        gameObject.SetActive(false);
         player.SetCanMove(true);
         isGoingThroughTutorial = false;
     }
+
+    private void SetTutorialInactive() { gameObject.SetActive(false); }
 }

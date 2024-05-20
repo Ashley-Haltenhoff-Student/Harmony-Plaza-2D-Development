@@ -4559,6 +4559,7 @@ RectTransform:
   m_LocalScale: {x: 5.5, y: 5.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1707272972}
   - {fileID: 2084276687}
   - {fileID: 1201596550}
   m_Father: {fileID: 1289316730}
@@ -13476,6 +13477,85 @@ MonoBehaviour:
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!1 &1707272971
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1707272972}
+  - component: {fileID: 1707272974}
+  - component: {fileID: 1707272973}
+  m_Layer: 5
+  m_Name: Text_Header
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1707272972
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707272971}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.13888907, y: 0.10660381, z: 0.37311}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 894191938}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.0000019073, y: 42.8}
+  m_SizeDelta: {x: 679.23145, y: 187.66602}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1707272973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707272971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 68bbc2dccfea2c64fadfeb7a8fc33320, type: 3}
+    m_FontSize: 34
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 77
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Welcome to your own bookstore!
+--- !u!222 &1707272974
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707272971}
+  m_CullTransparentMesh: 1
 --- !u!1 &1708154976
 GameObject:
   m_ObjectHideFlags: 0
@@ -13732,7 +13812,7 @@ MonoBehaviour:
   tutorial: {fileID: 1384223048}
   dialogue:
   - 'This is the Tutorial. '
-  - 'This is the Tutorial. '
+  - \n
   - 'This is the Tutorial. '
   - 'This is the Tutorial. '
   - 'This is the Tutorial. '
@@ -14352,7 +14432,7 @@ GameObject:
   - component: {fileID: 2084276689}
   - component: {fileID: 2084276688}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Text_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14374,8 +14454,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000019073, y: 3.8751016}
-  m_SizeDelta: {x: 679.23145, y: 813.1466}
+  m_AnchoredPosition: {x: 0, y: -1.7}
+  m_SizeDelta: {x: 679.23145, y: 840.5593}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2084276688
 MonoBehaviour:
@@ -14399,18 +14479,24 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 68bbc2dccfea2c64fadfeb7a8fc33320, type: 3}
-    m_FontSize: 42
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 77
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: "YOU are in charge of making sure this business doesn't go under, and making
+    sure you keep your job.\n\nHere's a few things to know:\n\n    - press E to interact
+    with objects.\n\n    - All the stock (boxes in the backroom) needs to be put
+    away before closing time. \nPress TAB to open the blueprint of the store.\n\n   
+    - Make sure you pay attention to your customers. They'll have questions and will
+    need to be checked out at the register.\n\n    - At the end of the day, you'll
+    be given a points that determine how well you managed the store."
 --- !u!222 &2084276689
 CanvasRenderer:
   m_ObjectHideFlags: 0

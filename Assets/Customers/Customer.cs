@@ -1,5 +1,5 @@
+using HarmonyPlaza;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -9,14 +9,13 @@ public class Customer : MonoBehaviour
     [SerializeField] Animator animator;
 
     [SerializeField] private Vector3[] possibleActions;
-    public bool[] isNotAvailableActions;
+    [SerializeField] private Vector3[] chosenActions;
 
     private Vector3 normalizedMovement;
-    private Vector3 forwardVector;
     private Vector3 rightVector;
     public Vector3 target;
 
-    private int lastPositionIndex;
+    private bool canLeavePosition = true;
 
     void Start()
     {
@@ -25,29 +24,36 @@ public class Customer : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
 
-        isNotAvailableActions = new bool[possibleActions.Length];
-        SetTargetPosition();
+        int rnd = Random.Range(1, 5);
+        chosenActions = new Vector3[rnd];
+        for (int i = 0; i < chosenActions.Length; i++) 
+        {
+            chosenActions[i] = possibleActions[Random.Range(0, possibleActions.Length - 1)];
+        }
+
+        StartCoroutine(GoThroughTargetPositions());
     }
 
     void Update()
     {
-        if (transform.position.x == target.x && Mathf.Abs(transform.position.y - target.y) < 0.001)
-        {
-            print("has the same y coord");
-            isNotAvailableActions[lastPositionIndex] = true;
-            SetTargetPosition();
-        }
         Animate();
         SetAgentPosition();
     }
 
-    private void SetTargetPosition()
+    private IEnumerator GoThroughTargetPositions()
     {
-        //int rnd = Random.Range(0, CheckAvailablePoints().Length);
-        int rnd = Random.Range(0, possibleActions.Length);
-
-        lastPositionIndex = rnd;
-        target = GetAction(rnd);
+        for (int i = 0; i < chosenActions.Length; i++)
+        {
+            target = chosenActions[i];
+            if (Mathf.Abs(transform.position.x - target.x) < 0.001
+                && Mathf.Abs(transform.position.y - target.y) < 0.001)
+            {
+                int rnd = Random.Range(0, 6);
+                StartCoroutine(StayInPosition(rnd));
+                if (!canLeavePosition) { yield return null; }
+            }
+        }
+        Leave();
     }
 
     private void SetAgentPosition()
@@ -58,14 +64,7 @@ public class Customer : MonoBehaviour
     private void Animate()
     {
         normalizedMovement = agent.desiredVelocity.normalized;
-        //forwardVector = Vector3.Project(normalizedMovement, transform.up);
         rightVector = Vector3.Project(normalizedMovement, transform.right);
-
-        //if (forwardVector.y > 0.9f) { animator.SetBool("Up", true); }
-        //else { animator.SetBool("Up", false); }
-
-        //if (forwardVector.y < System.Math.Abs(-0.08f)) { animator.SetBool("Down", true); }
-        //else { animator.SetBool("Down", false); }
 
         if (rightVector.x > 0) { animator.SetBool("Right", true); }
         else { animator.SetBool("Right", false); }
@@ -74,26 +73,26 @@ public class Customer : MonoBehaviour
         else { animator.SetBool("Left", false); }
     }
 
-    private Vector3 GetAction(int rndNum)
+    private IEnumerator StayInPosition(int seconds)
     {
-        //Vector3[] availablePoints = CheckAvailablePoints();
-        isNotAvailableActions[rndNum] = false;
-        //return availablePoints[rndNum];
-        return possibleActions[rndNum];
+        canLeavePosition = false;
+        yield return new WaitForSeconds(seconds);
+        canLeavePosition = true;
     }
 
-    private Vector3[] CheckAvailablePoints()
+    private void CheckOutAtRegister()
     {
-        int num = 0-1;
-        foreach (bool boolean in isNotAvailableActions) { if (boolean == false) { num++; } }
+        target = new Vector3(23, 26, 0);
+    }
 
-        Vector3[] availablePoints = new Vector3[num];
-        int num2 = 0;
-
-        for (int i = 0; i < possibleActions.Length; i++)
+    private IEnumerator Leave()
+    {
+        target = new Vector3(26, 24, 0);
+        if (Mathf.Abs(transform.position.x - target.x) < 0.001
+                && Mathf.Abs(transform.position.y - target.y) < 0.001)
         {
-            if (isNotAvailableActions[i] == false) { availablePoints[num] = possibleActions[i]; num2++; }
+            Destroy(gameObject);
         }
-        return availablePoints;
+        else { yield return null; }
     }
 }

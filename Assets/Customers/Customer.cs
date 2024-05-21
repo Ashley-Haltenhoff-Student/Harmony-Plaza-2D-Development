@@ -7,6 +7,7 @@ public class Customer : MonoBehaviour
 {
     [SerializeField] NavMeshAgent agent;
     [SerializeField] Animator animator;
+    [SerializeField] CashRegister cashRegister;
 
     [SerializeField] private Vector3[] possibleActions;
     [SerializeField] private Vector3[] chosenActions;
@@ -17,10 +18,15 @@ public class Customer : MonoBehaviour
 
     private bool canLeavePosition = true;
 
+    public bool isFirstInLine = false;
+
+    [SerializeField] private int patienceInSeconds;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        cashRegister = FindFirstObjectByType<CashRegister>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
 
@@ -45,15 +51,23 @@ public class Customer : MonoBehaviour
         for (int i = 0; i < chosenActions.Length; i++)
         {
             target = chosenActions[i];
-            if (Mathf.Abs(transform.position.x - target.x) < 0.001
-                && Mathf.Abs(transform.position.y - target.y) < 0.001)
+            while (Mathf.Abs(transform.position.x - target.x) > 0.001
+                && Mathf.Abs(transform.position.y - target.y) > 0.001) { yield return null; }
+
+            int rnd = Random.Range(0, 6);
+            StartCoroutine(StayInPosition(rnd));
+
+            int rnd2 = Random.Range(1, 4);
+            if (rnd2 == 1)
             {
-                int rnd = Random.Range(0, 6);
-                StartCoroutine(StayInPosition(rnd));
-                if (!canLeavePosition) { yield return null; }
+                 CheckOutAtRegister();
+                 break;
             }
+            else if (!canLeavePosition) { yield return null; }
+
         }
-        Leave();
+
+        StartCoroutine(Leave());
     }
 
     private void SetAgentPosition()
@@ -82,10 +96,19 @@ public class Customer : MonoBehaviour
 
     private void CheckOutAtRegister()
     {
-        target = new Vector3(23, 26, 0);
+        for (int i = 0; i < cashRegister.customersInLine.Length; i++)
+        {
+            if (cashRegister.customersInLine[i] == null) 
+            { 
+                cashRegister.customersInLine[i] = this;
+                target = cashRegister.linePoints[i];
+                break;
+            }
+        }
+
     }
 
-    private IEnumerator Leave()
+    public IEnumerator Leave()
     {
         target = new Vector3(26, 24, 0);
         if (Mathf.Abs(transform.position.x - target.x) < 0.001
@@ -95,4 +118,7 @@ public class Customer : MonoBehaviour
         }
         else { yield return null; }
     }
+
+    public void SetTarget(Vector3 point) { target = point; }
+
 }

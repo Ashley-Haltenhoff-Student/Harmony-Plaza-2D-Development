@@ -12,7 +12,7 @@ namespace HarmonyPlaza
         [SerializeField] private float timeSpeed = 1.0f;
         [SerializeField] private UI UI;
 
-        private int hour = 8;
+        public int hour = 8;
         private int minute = 0;
         private string timeOfDay = "am";
 

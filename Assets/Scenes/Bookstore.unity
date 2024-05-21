@@ -4978,6 +4978,7 @@ MonoBehaviour:
   boxes: {fileID: 813853282}
   timeSpeed: 0.25
   UI: {fileID: 556220784}
+  hour: 9
 --- !u!1001 &1041593908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5186,11 +5187,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4040733312056664676, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26
+      value: 25.76
       objectReference: {fileID: 0}
     - target: {fileID: 4040733312056664676, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.5
+      value: 24.33
       objectReference: {fileID: 0}
     - target: {fileID: 4040733312056664676, guid: 4fd427d51e0d6da48b0f9e70221e68e9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6422,13 +6423,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 500102848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eb17b4175be8a544af5541bcb44d17f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d5b2bea73a29724da2c66bbb692155c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
   dialogue:
   - A cash register... to store cash.
   - Also a cute little plant named momo!!
+  customersInLine:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  linePoints:
+  - {x: 22, y: 26, z: 0}
+  - {x: 20, y: 26, z: 0}
+  - {x: 18, y: 26, z: 0}
+  - {x: 16, y: 26, z: 0}
+  - {x: 14, y: 26, z: 0}
 --- !u!1 &1517544162
 GameObject:
   m_ObjectHideFlags: 0
@@ -14760,10 +14773,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3379586968228066187, guid: dc1ea48ebfbdf2c4b909b52fba1bb24b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1507105925}
+      addedObject: {fileID: 1507105924}
     - targetCorrespondingSourceObject: {fileID: 3379586968228066187, guid: dc1ea48ebfbdf2c4b909b52fba1bb24b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1507105924}
+      addedObject: {fileID: 1507105925}
   m_SourcePrefab: {fileID: 100100000, guid: dc1ea48ebfbdf2c4b909b52fba1bb24b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

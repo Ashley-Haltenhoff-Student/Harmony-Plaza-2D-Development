@@ -7,6 +7,7 @@ namespace HarmonyPlaza
     {
         [SerializeField] private Player player;
         [SerializeField] private Inventory inventory;
+        [SerializeField] private ResultHandler resultHandler;
         [SerializeField] private Stock stock = null;
 
         [SerializeField] private string bookshelfName;
@@ -22,6 +23,7 @@ namespace HarmonyPlaza
                         UI.PrintDialogue("Book correctly stocked!");
                         inventory.DestroyStock();
                         UI.SetObjectBoxInactive();
+                        resultHandler.IncrementBookStocked();
                     }
                     else
                     {

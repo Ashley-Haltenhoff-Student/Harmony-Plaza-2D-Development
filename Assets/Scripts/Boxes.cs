@@ -110,4 +110,6 @@ public class Boxes : InteractableObject
     }
 
     public bool GetStartedStocking() {  return startedStocking; }
+
+    public GameObject[] GetStockArray() { return stocks; }
 }

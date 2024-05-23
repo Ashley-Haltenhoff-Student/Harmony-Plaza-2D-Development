@@ -19,13 +19,15 @@ namespace HarmonyPlaza
         [SerializeField] private Text customersIgnoredText;
         [SerializeField] private Text gradeText;
 
-        private int booksStocked;
-        private int booksNotStocked;
-        private int customersHelped;
-        private int customersIgnored;
+        [SerializeField] private int booksStocked;
+        [SerializeField] private int booksNotStocked;
+        [SerializeField] private int customersHelped;
+        [SerializeField] private int customersIgnored;
     
         private int totalPoints;
         private string result;
+
+        private void Awake() { DontDestroyOnLoad(this.gameObject); }
 
         public void EndResult()
         {

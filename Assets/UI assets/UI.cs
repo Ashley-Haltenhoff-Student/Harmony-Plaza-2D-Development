@@ -64,7 +64,7 @@ namespace HarmonyPlaza
 
         protected IEnumerator HandleDialogue(string[] dialogues)
         {
-            while (tutorial.isGoingThroughTutorial) { yield return null; }
+            if (tutorial != null) { while (tutorial.isGoingThroughTutorial) { yield return null; } }
             player.SetCanMove(false);
             isPrintingDialogue = true;
             dialogueBox.SetActive(true);

@@ -1,17 +1,17 @@
 using HarmonyPlaza;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
 namespace HarmonyPlaza 
 { 
-    public class ResultHandler : MonoBehaviour
+    public class ResultUI : MonoBehaviour
     {
-        [SerializeField] private Boxes boxes;
-        [SerializeField] private CashRegister register;
+        [SerializeField] private StatHandler stats;
 
-        [SerializeField] private GameObject endResultBox;
+        [SerializeField] private Animator transitionAnimator;
 
         [SerializeField] private Text booksStockedText;
         [SerializeField] private Text booksNotStockedText;
@@ -27,49 +27,34 @@ namespace HarmonyPlaza
         private int totalPoints;
         private string result;
 
-        private void Awake() { DontDestroyOnLoad(this.gameObject); }
+        private int printsFinished = 0;
 
-        public void EndResult()
+        private void Start()
         {
-            FindBoxesStocked();
-            FindCustomersIgnored();
-            customersHelped = register.customersHelped;
+            stats = FindFirstObjectByType<StatHandler>();
 
-            endResultBox.SetActive(true);
+            booksStocked = stats.booksStocked;
+            booksNotStocked = stats.booksNotStocked;
+            customersIgnored = stats.customersIgnored;
+            customersHelped = stats.customersHelped;
 
             StartCoroutine(PrintNum(booksStockedText, booksStocked, "Books Stocked: "));
             StartCoroutine(PrintNum(booksNotStockedText, booksNotStocked, "Books Not Stocked: "));
             StartCoroutine(PrintNum(customersHelpedText, customersHelped, "Customers Helped: "));
             StartCoroutine(PrintNum(customersIgnoredText, customersIgnored, "Customers Ignored: "));
 
-            CalculateGrade();
+            //print grade
         }
 
-        private void FindBoxesStocked()
+        private void Update()
         {
-            GameObject[] stock = boxes.GetStockArray();
-
-            foreach (GameObject s in stock)
+            if (printsFinished == 4)
             {
-                if (s != null) { booksNotStocked++; }
-                else if (s != null) { booksStocked++; }
+                if (Input.GetKeyDown(KeyCode.Space)) 
+                {
+                    SceneManager.LoadScene("TitleScreen"); 
+                }
             }
-
-        }
-
-        private void FindCustomersIgnored()
-        {
-            foreach (Customer c in register.customersInLine)
-            {
-                if (c != null) { customersIgnored++; }
-            }
-        }
-
-        private void CalculateGrade()
-        {
-            // add stats together to calculate grade
-            // print grade
-            // print result
         }
 
         private IEnumerator PrintNum(Text textBox, int num, string countIdentifier)
@@ -77,12 +62,10 @@ namespace HarmonyPlaza
             for (int i = 0; i <= num; i++)
             {
                 textBox.text = countIdentifier + i.ToString();
-                yield return new WaitForSeconds(0.8f);
+                yield return new WaitForSeconds(0.6f);
             }
+            printsFinished++;
         }
-
-        public void IncrementBookStocked() { booksStocked++; }
     }
-
 }
 

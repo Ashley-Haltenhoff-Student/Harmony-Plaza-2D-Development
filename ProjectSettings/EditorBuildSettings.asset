@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bookstore.unity
     guid: 67014d5007b67a34cbf31f3a3ed2ab26
+  - enabled: 1
+    path: Assets/Scenes/ResultScreen.unity
+    guid: e2d55f7a57609394190691e2a447ee51
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

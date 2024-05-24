@@ -3,11 +3,10 @@ using UnityEngine;
 
 namespace HarmonyPlaza 
 { 
-
     public class Clock : MonoBehaviour
     {
         [SerializeField] private Animator timeAnimator;
-        [SerializeField] private ResultHandler resultHandler;
+        [SerializeField] private StatHandler stats;
         [SerializeField] private Boxes boxes;
 
         [SerializeField] private float timeSpeed = 1.0f;
@@ -52,7 +51,7 @@ namespace HarmonyPlaza
                 if (minute == 0 || minute == 30) { UI.SetTime($"{hour}:{zero}{minute}{timeOfDay}"); }
                 yield return new WaitForSeconds(timeSpeed);
             }
-            resultHandler.EndResult();
+            stats.EndGame();
         }
 
         public int GetHour() { return hour; }

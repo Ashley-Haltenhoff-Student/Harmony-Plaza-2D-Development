@@ -1398,6 +1398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1027067389}
+  tutorial: {fileID: 0}
   timeText: {fileID: 2013333}
   dayText: {fileID: 404555168}
   dialogueText: {fileID: 2143706353}
@@ -1407,8 +1408,8 @@ MonoBehaviour:
   inventory: {fileID: 0}
   stockImage: {fileID: 0}
   objectBox: {fileID: 0}
-  endResultBox: {fileID: 0}
-  endResultText: {fileID: 0}
+  isPrintingDialogue: 0
+  skipToFullText: 0
 --- !u!1 &956995512
 GameObject:
   m_ObjectHideFlags: 0

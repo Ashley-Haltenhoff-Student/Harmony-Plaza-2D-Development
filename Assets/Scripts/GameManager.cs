@@ -17,11 +17,18 @@ namespace HarmonyPlaza {
             {
                 instance = this;
             }
+
+            DontDestroyOnLoad(this);
         }
 
         public void LoadScene(string sceneName)
         {
             SceneManager.LoadScene(sceneName);
+        }
+
+        public void EndGame()
+        {
+            SceneManager.LoadScene("ResultScreen");
         }
     }
 }

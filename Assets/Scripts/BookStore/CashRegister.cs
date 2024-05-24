@@ -4,6 +4,8 @@ namespace HarmonyPlaza
 { 
     public class CashRegister : InteractableObject
     {
+        [SerializeField] private StatHandler stats;
+
         public Customer[] customersInLine = new Customer[10];
         public Vector3[] linePoints = new Vector3[5];
 
@@ -21,6 +23,7 @@ namespace HarmonyPlaza
         private void CheckOut()
         {
             UI.PrintDialogue("Checking out customer...");
+            stats.IncrementCustomersHelped();
             StartCoroutine(customersInLine[0].Leave());
             customersInLine[0] = null;
             customersHelped++;

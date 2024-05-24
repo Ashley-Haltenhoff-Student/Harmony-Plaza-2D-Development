@@ -398,7 +398,7 @@ MonoBehaviour:
   - It looks like it holds romance books.
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
-  resultHandler: {fileID: 2099305004}
+  stats: {fileID: 2099305004}
   stock: {fileID: 0}
   bookshelfName: Romance
 --- !u!114 &125478887 stripped
@@ -1182,7 +1182,7 @@ MonoBehaviour:
   - It looks like it holds history books.
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
-  resultHandler: {fileID: 2099305004}
+  stats: {fileID: 2099305004}
   stock: {fileID: 0}
   bookshelfName: History
 --- !u!61 &398225697
@@ -1311,7 +1311,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &477894285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1526,7 +1526,7 @@ MonoBehaviour:
   - It looks like it holds fiction books.
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
-  resultHandler: {fileID: 2099305004}
+  stats: {fileID: 2099305004}
   stock: {fileID: 0}
   bookshelfName: Fiction
 --- !u!1 &500102848 stripped
@@ -1909,7 +1909,7 @@ MonoBehaviour:
   - It looks like it holds educational books.
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
-  resultHandler: {fileID: 2099305004}
+  stats: {fileID: 2099305004}
   stock: {fileID: 0}
   bookshelfName: Educational
 --- !u!1 &681839831
@@ -4504,6 +4504,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   stockPrefabs:
   - {fileID: 3116386105220306924, guid: c8077c402abf26746b92c481f78733a9, type: 3}
   - {fileID: 3116386105220306924, guid: fbf206f29517ec745b3b3662f679d755, type: 3}
@@ -5214,7 +5220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeAnimator: {fileID: 7931792}
-  resultHandler: {fileID: 2099305004}
+  stats: {fileID: 2099305004}
   boxes: {fileID: 813853282}
   timeSpeed: 0.25
   UI: {fileID: 556220784}
@@ -5896,7 +5902,7 @@ MonoBehaviour:
   - It looks like it holds science fiction books.
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
-  resultHandler: {fileID: 2099305004}
+  stats: {fileID: 2099305004}
   stock: {fileID: 0}
   bookshelfName: ScienceFiction
 --- !u!1001 &1221042507
@@ -6905,7 +6911,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 2.622797, y: -2.5669918}
+  m_Offset: {x: 2.622797, y: -0.34150887}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6915,7 +6921,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 6.9152412, y: 7.4732857}
+  m_Size: {x: 6.9152412, y: 3.0223198}
   m_EdgeRadius: 0
 --- !u!114 &1507105925
 MonoBehaviour:
@@ -6933,6 +6939,7 @@ MonoBehaviour:
   dialogue:
   - A cash register... to store cash.
   - Also a cute little plant named momo!!
+  stats: {fileID: 2099305004}
   customersInLine:
   - {fileID: 0}
   - {fileID: 0}
@@ -7896,7 +7903,7 @@ MonoBehaviour:
   - It looks like it holds classic books.
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
-  resultHandler: {fileID: 2099305004}
+  stats: {fileID: 2099305004}
   stock: {fileID: 0}
   bookshelfName: Classics
 --- !u!1 &1593626901
@@ -14313,7 +14320,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 21.228203, y: 23.755217}
+  m_Offset: {x: 21.228203, y: 21.809372}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -14323,7 +14330,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.2727127, y: 6.9671288}
+  m_Size: {x: 3.2727127, y: 10.858816}
   m_EdgeRadius: 0
 --- !u!114 &1806096460
 MonoBehaviour:
@@ -14354,7 +14361,7 @@ Transform:
   m_GameObject: {fileID: 1806096458}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14747,7 +14754,7 @@ MonoBehaviour:
   - It looks like it holds mystery books.
   player: {fileID: 125478887}
   inventory: {fileID: 491626438}
-  resultHandler: {fileID: 2099305004}
+  stats: {fileID: 2099305004}
   stock: {fileID: 0}
   bookshelfName: Mystery
 --- !u!1 &1987570468
@@ -15020,12 +15027,11 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "YOU are in charge of making sure this business doesn't go under, and making
-    sure you keep your job.\n\nHere's a few things to know:\n\n    - press E to interact
-    with objects.\n\n    - All the stock (boxes in the backroom) needs to be put
-    away before closing time. \nPress TAB to open the blueprint of the store.\n\n   
-    - Make sure you pay attention to your customers. They'll have questions and will
-    need to be checked out at the register.\n\n    - At the end of the day, you'll
-    be given a points that determine how well you managed the store."
+    sure you keep your job.\n\nHere's a few things to know:\n\n    - All the stock
+    (IN THE BOXES) needs to be put away before 6PM\n\n    - Time won't start until
+    you start stocking, so try exploring the place!\n >PRESS E TO INTERACT<\n\n   
+    - >PRESS TAB< to open the blueprint of the store.\n\n    - Make sure you check
+    out your customers!\n\n    - You'll be given a grade at the end of your shift."
 --- !u!222 &2084276689
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15107,7 +15113,7 @@ GameObject:
   - component: {fileID: 2099305003}
   - component: {fileID: 2099305004}
   m_Layer: 0
-  m_Name: Result Handler
+  m_Name: Stat Handler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15137,17 +15143,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2099305002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92f698e77beb900408323eee83daddc8, type: 3}
+  m_Script: {fileID: 11500000, guid: 039975a9d8572e24bad3e34e94468d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 297805842}
   boxes: {fileID: 813853282}
   register: {fileID: 1507105925}
-  endResultBox: {fileID: 1256316130}
-  booksStockedText: {fileID: 938574119}
-  booksNotStockedText: {fileID: 1115681890}
-  customersHelpedText: {fileID: 975878758}
-  customersIgnoredText: {fileID: 844156711}
-  gradeText: {fileID: 1270401252}
+  booksStocked: 0
+  booksNotStocked: 0
+  customersHelped: 0
+  customersIgnored: 0
 --- !u!1001 &2113615408
 PrefabInstance:
   m_ObjectHideFlags: 0

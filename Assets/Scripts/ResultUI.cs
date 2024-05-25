@@ -43,7 +43,7 @@ namespace HarmonyPlaza
             StartCoroutine(PrintNum(customersHelpedText, customersHelped, "Customers Helped: "));
             StartCoroutine(PrintNum(customersIgnoredText, customersIgnored, "Customers Ignored: "));
 
-            //print grade
+            CalculateGrade();
         }
 
         private void Update()
@@ -55,6 +55,11 @@ namespace HarmonyPlaza
                     SceneManager.LoadScene("TitleScreen"); 
                 }
             }
+        }
+
+        private void CalculateGrade()
+        {
+
         }
 
         private IEnumerator PrintNum(Text textBox, int num, string countIdentifier)

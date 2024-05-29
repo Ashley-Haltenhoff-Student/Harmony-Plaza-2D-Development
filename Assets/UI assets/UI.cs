@@ -22,6 +22,8 @@ namespace HarmonyPlaza
         [SerializeField] private Image stockImage;
         [SerializeField] private GameObject objectBox;
 
+        [SerializeField] private GameObject quitOptions;
+
         public bool isPrintingDialogue = false;
         public bool skipToFullText = false;
 
@@ -121,6 +123,5 @@ namespace HarmonyPlaza
 
         public void SetObjectBoxInactive() { objectBox.SetActive(false); }
         public void SetTime(string givenTime) { timeText.text = givenTime; }
-        public void SetDay(string currentDay) { dayText.text = currentDay; }
     }
 }

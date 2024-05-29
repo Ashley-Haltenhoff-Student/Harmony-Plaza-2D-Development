@@ -7,27 +7,68 @@ public class Spawner : MonoBehaviour
     [SerializeField] private Clock clock;
     [SerializeField] private GameObject[] prefabs;
 
-    public int spawnNumAtNine;
-    public int minAtNine;
-    public int maxAtNine;
+    private Difficulty difficulty;
 
-    public int spawnNumAtNoon;
-    public int minAtNoon;
-    public int maxAtNoon;
+    private int spawnNumAtNine;
+    private int minAtNine;
+    private int maxAtNine;
 
-    public int spawnNumAtThree;
-    public int minAtThree;
-    public int maxAtThree;
+    private int spawnNumAtNoon;
+    private int minAtNoon;
+    private int maxAtNoon;
+
+    private int spawnNumAtThree;
+    private int minAtThree;
+    private int maxAtThree;
 
     private bool canSpawn = true;
 
+
+    private void Start()
+    {
+        difficulty = FindFirstObjectByType<Difficulty>();
+
+        if (difficulty.difficulty == "easy")
+        {
+            spawnNumAtNine = 3;
+            spawnNumAtNoon = 5;
+            spawnNumAtThree = 3;
+
+            minAtNine = 10;
+            maxAtNine = 15;
+
+            minAtNoon = 5;
+            maxAtNoon = 15;
+
+            minAtThree = 10;
+            maxAtThree = 15;
+        }
+
+        else if (difficulty.difficulty == "hard")
+        {
+            spawnNumAtNine = 4;
+            spawnNumAtNoon = 6;
+            spawnNumAtThree = 3;
+
+            minAtNine = 10;
+            maxAtNine = 15;
+
+            minAtNoon = 5;
+            maxAtNoon = 15;
+
+            minAtThree = 10;
+            maxAtThree = 15;
+        }
+    }
+
+
     private void Update()
     {
-        if (clock.GetHour() == 9 && clock.GetMinute() == 0) { print("starting 9 am coroutine"); StartCoroutine(Spawn(spawnNumAtNine, minAtNine, maxAtNine)); }
+        if (clock.GetHour() == 9 && clock.GetMinute() == 0) { StartCoroutine(Spawn(spawnNumAtNine, minAtNine, maxAtNine)); }
 
-        if (clock.GetHour() == 12 && clock.GetMinute() == 0) { print("starting 12 pm coroutine"); StartCoroutine(Spawn(spawnNumAtNoon, minAtNoon, maxAtNoon)); }
+        if (clock.GetHour() == 12 && clock.GetMinute() == 0) { StartCoroutine(Spawn(spawnNumAtNoon, minAtNoon, maxAtNoon)); }
 
-        if (clock.GetHour() == 3 && clock.GetMinute() == 0) { print("starting 3 pm coroutine"); StartCoroutine(Spawn(spawnNumAtThree, minAtThree, maxAtThree)); }
+        if (clock.GetHour() == 3 && clock.GetMinute() == 0) { StartCoroutine(Spawn(spawnNumAtThree, minAtThree, maxAtThree)); }
     }
 
     private IEnumerator Spawn(int customerNum, int waitTimeMin, int waitTimeMax)

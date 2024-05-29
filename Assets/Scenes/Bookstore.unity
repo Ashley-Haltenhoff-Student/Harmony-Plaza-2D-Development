@@ -5166,15 +5166,6 @@ MonoBehaviour:
   clock: {fileID: 1018587021}
   prefabs:
   - {fileID: 1429932305710338034, guid: 1f244e3a3b57a9948afd768f2956a4a0, type: 3}
-  spawnNumAtNine: 3
-  minAtNine: 10
-  maxAtNine: 15
-  spawnNumAtNoon: 5
-  minAtNoon: 5
-  maxAtNoon: 15
-  spawnNumAtThree: 3
-  minAtThree: 10
-  maxAtThree: 15
 --- !u!1 &1018587019
 GameObject:
   m_ObjectHideFlags: 0
@@ -7053,7 +7044,7 @@ Animator:
   m_GameObject: {fileID: 1517544162}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cd7ce9c37b119ab409566506414ec4cd, type: 2}
+  m_Controller: {fileID: 9100000, guid: e1a7e51d0b91f9f4e8d0d273bfdd7d47, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

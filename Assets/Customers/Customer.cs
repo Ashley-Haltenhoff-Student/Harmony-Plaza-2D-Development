@@ -114,7 +114,6 @@ namespace HarmonyPlaza
                 yield return null;
             }
                 Destroy(gameObject);
-                print(gameObject + " is destroyed");
         }
 
         public void SetTarget(Vector3 point) { target = point; }

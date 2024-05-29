@@ -10,6 +10,7 @@ namespace HarmonyPlaza
     public class ResultUI : MonoBehaviour
     {
         [SerializeField] private StatHandler stats;
+        private Difficulty difficulty;
 
         [SerializeField] private Animator transitionAnimator;
 
@@ -31,6 +32,7 @@ namespace HarmonyPlaza
 
         private void Start()
         {
+            difficulty = FindFirstObjectByType<Difficulty>();
             stats = FindFirstObjectByType<StatHandler>();
 
             booksStocked = stats.booksStocked;
@@ -43,7 +45,8 @@ namespace HarmonyPlaza
             StartCoroutine(PrintNum(customersHelpedText, customersHelped, "Customers Helped: "));
             StartCoroutine(PrintNum(customersIgnoredText, customersIgnored, "Customers Ignored: "));
 
-            CalculateGrade();
+            gradeText.text = "Grade: " + CalculateGrade();
+            Destroy(difficulty);
         }
 
         private void Update()
@@ -57,9 +60,26 @@ namespace HarmonyPlaza
             }
         }
 
-        private void CalculateGrade()
+        private char CalculateGrade()
         {
-
+            int points = booksStocked + customersHelped;
+            if (difficulty.difficulty == "easy")
+            {
+                if (points >= 17) { return 'S'; }
+                else if (points >= 14) { return 'A'; }
+                else if (points >= 12) { return 'B'; }
+                else if (points >= 8) { return 'C'; }
+                else if (points < 8) { return 'F'; }
+            }
+            else if (difficulty.difficulty == "hard")
+            {
+                if (points >= 19) { return 'S'; }
+                else if (points >= 17) { return 'A'; }
+                else if (points >= 14) { return 'B'; }
+                else if (points >= 10) { return 'C'; }
+                else if (points < 10) { return 'F'; }
+            }
+            return 'F';
         }
 
         private IEnumerator PrintNum(Text textBox, int num, string countIdentifier)

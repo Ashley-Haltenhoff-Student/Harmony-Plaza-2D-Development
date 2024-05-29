@@ -6,17 +6,24 @@ public class Boxes : InteractableObject
 {
     [SerializeField] private Tutorial tutorial;
 
-    [SerializeField] private GameObject[] stocks = new GameObject[3];
+    [SerializeField] private GameObject[] stocks;
     [SerializeField] private GameObject[] stockPrefabs;
     [SerializeField] private Inventory inventory;
     [SerializeField] private Player player;
-    [SerializeField] private Text clockTime;
+    [SerializeField] private Text clockTime; 
+
     private GameObject chosenStock;
+    private Difficulty difficulty;
 
     private bool startedStocking = false;
 
     void Start()
     {
+        difficulty = FindFirstObjectByType<Difficulty>();
+
+        if (difficulty.difficulty == "easy") { stocks = new GameObject[10]; }
+        else if (difficulty.difficulty == "hard") { stocks = new GameObject[12]; }
+
         UI = FindAnyObjectByType<UI>();
         inventory = player.GetComponent<Inventory>();
         CreateStock();
@@ -42,7 +49,6 @@ public class Boxes : InteractableObject
                 else
                 {
                     UI.PrintDialogue("No more stock left");
-                    print("Stock Completed at " + clockTime.text);
                 }
             }
         }
